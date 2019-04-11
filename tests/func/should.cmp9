@@ -1,0 +1,5 @@
+(fun f9 int ("annot_ret")
+  (param int "s1" ("annot_s_Hello"))
+  (param int "s2" ("annot_s_Hello"))
+)
+

@@ -1,0 +1,4 @@
+type {(Enum_name)} =
+{<Enum_list<{  | {(Enum_val_name)}
+}>Enum_list>}
+

@@ -1,0 +1,15 @@
+<function
+  f_name="{(Fun_name)}"
+  return_type="{(Fun_return_type)}">
+  <f_annots>
+{<Fun_annots<{  <annot>{(Annot)}</annot>
+}>Fun_annots>}  </f_annots>
+{<Args<{  <param
+    p_type="{(Param_type)}"
+    p_name="{(Param_name)}">
+   <p_annots>
+{<Param_annots<{    <annot>{(Annot)}</annot>
+}>Param_annots>}   </p_annots>
+  </param>
+}>Args>}</function>
+

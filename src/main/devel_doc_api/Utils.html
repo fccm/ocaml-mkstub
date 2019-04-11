@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="next" href="Cmd_line.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><link title="Strings" rel="Section" href="#5_Strings">
+<link title="I/O" rel="Section" href="#5_IO">
+<link title="Pipes" rel="Section" href="#5_Pipes">
+<link title="Lists" rel="Section" href="#5_Lists">
+<link title="Debug" rel="Section" href="#5_Debug">
+<link title="List Map" rel="Subsection" href="#6_ListMap">
+<link title="List Assoc" rel="Subsection" href="#6_ListAssoc">
+<title>Utils</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Cmd_line.html" title="Cmd_line">Next</a>
+</div>
+<h1>Module <a href="type_Utils.html">Utils</a></h1>
+<pre><span class="keyword">module</span> Utils: <code class="code">sig</code> <a href="Utils.html">..</a> <code class="code">end</code></pre><div class="info">
+Just some utility functions<br>
+</div>
+<hr width="100%">
+<br>
+<h5 id="5_Strings">Strings</h5><br>
+<pre><span id="VALchar_split"><span class="keyword">val</span> char_split</span> : <code class="type">char -> string -> string list</code></pre><pre><span id="VALstr_extract"><span class="keyword">val</span> str_extract</span> : <code class="type">string -> string -> char -> string list</code></pre><div class="info">
+example: <pre class="codepre"><code class="code">  let s = "Hello gccxml(export) World gccxml(import) Nada" in
+  (str_extract s "gccxml(" ')')
+</code></pre>
+  returns: <code class="code">["export"; "import"]</code><br>
+</div>
+<pre><span id="VALstrip"><span class="keyword">val</span> strip</span> : <code class="type">?chars:string -> string -> string</code></pre><pre><span id="VALstarts_with"><span class="keyword">val</span> starts_with</span> : <code class="type">string -> string -> bool</code></pre><div class="info">
+<code class="code">starts_with b s</code> checks if <code class="code">s</code> starts with <code class="code">b</code><br>
+</div>
+<pre><span id="VALrem_prefix"><span class="keyword">val</span> rem_prefix</span> : <code class="type">string -> string -> string</code></pre><div class="info">
+<code class="code">rem_prefix s prefix</code> removes <code class="code">prefix</code> from the beginning of <code class="code">s</code><br>
+</div>
+<pre><span id="VALunderscore"><span class="keyword">val</span> underscore</span> : <code class="type">string -> string</code></pre><div class="info">
+<code class="code">underscore s</code> replaces all spaces by underscores in <code class="code">s</code><br>
+</div>
+<pre><span id="VALis_alpha_num"><span class="keyword">val</span> is_alpha_num</span> : <code class="type">string -> bool</code></pre><div class="info">
+<code class="code">is_alpha_num s</code> checks if all characters of <code class="code">s</code> belong to:
+    <code class="code">'a'..'z' | 'A'..'Z' | '0'..'9' | '_'</code><br>
+</div>
+<pre><span id="VALjoin_multiline"><span class="keyword">val</span> join_multiline</span> : <code class="type">string list -> string list</code></pre><div class="info">
+<code class="code">["alpha"; "beta \\"; "gamma"; "delta"]</code>
+    becomes
+    <code class="code">["alpha"; "beta gamma"; "delta"]</code><br>
+</div>
+<br>
+<h5 id="5_IO">I/O</h5><br>
+<pre><span id="VALread_lines"><span class="keyword">val</span> read_lines</span> : <code class="type">string -> string list</code></pre><pre><span id="VALread_file"><span class="keyword">val</span> read_file</span> : <code class="type">string -> string</code></pre><pre><span id="VALread_file_join"><span class="keyword">val</span> read_file_join</span> : <code class="type">string -> string</code></pre><div class="info">
+same than <code class="code">read_file</code> but uses <code class="code">join_multiline</code><br>
+</div>
+<pre><span id="VALinput_ic"><span class="keyword">val</span> input_ic</span> : <code class="type">Pervasives.in_channel -> string</code></pre><pre><span id="VALoutput_oc"><span class="keyword">val</span> output_oc</span> : <code class="type">Pervasives.out_channel -> string -> unit</code></pre><br>
+<h5 id="5_Pipes">Pipes</h5><br>
+<pre><span id="VALcommand"><span class="keyword">val</span> command</span> : <code class="type">string -> string -> string</code></pre><pre><span id="VALcommand_pipe"><span class="keyword">val</span> command_pipe</span> : <code class="type">string -> string -> string -> string</code></pre><br>
+<h5 id="5_Lists">Lists</h5><br>
+<br>
+<h6 id="6_ListMap">List Map</h6><br>
+<pre><span id="VALlist_map"><span class="keyword">val</span> list_map</span> : <code class="type">('a -> 'b) -> 'a list -> 'b list</code></pre><div class="info">
+tail-rec <code class="code">List.map</code><br>
+</div>
+<pre><span id="VALlist_map_failsafe"><span class="keyword">val</span> list_map_failsafe</span> : <code class="type">('a -> 'b) -> 'a list -> 'b list</code></pre><div class="info">
+if the application of an element of the list raises an exception,
+    its result is not accumulated in the returned list (so then length
+    of the returned list may be smaller than the input one)<br>
+</div>
+<pre><span id="VALlist_map_opt"><span class="keyword">val</span> list_map_opt</span> : <code class="type">('a -> 'b option) -> 'a list -> 'b list</code></pre><div class="info">
+same than <code class="code">List.map</code> but discards elements when <code class="code">None</code> is returned<br>
+</div>
+<br>
+<h6 id="6_ListAssoc">List Assoc</h6><br>
+<pre><span id="VALassoc"><span class="keyword">val</span> assoc</span> : <code class="type">'a -> ('a * 'b) list -> 'b</code></pre><div class="info">
+same then <code class="code">List.assoc</code><br>
+</div>
+<pre><span id="VALassoc_err"><span class="keyword">val</span> assoc_err</span> : <code class="type">'a -> ('a * 'b) list -> string -> 'b</code></pre><div class="info">
+same then <code class="code">List.assoc</code> but with a custom error message<br>
+</div>
+<pre><span id="VALassoc_opt"><span class="keyword">val</span> assoc_opt</span> : <code class="type">'a -> ('a * 'b) list -> 'b option</code></pre><div class="info">
+same than <code class="code">List.assoc</code> but returns an <code class="code">option</code> instead of raising a
+    <code class="code">Not_found</code> exception.<br>
+</div>
+<pre><span id="VALassoc_default"><span class="keyword">val</span> assoc_default</span> : <code class="type">'a -> ('a * 'b) list -> 'b -> 'b</code></pre><div class="info">
+same than <code class="code">List.assoc</code> but returns a default value instead of raising a
+    <code class="code">Not_found</code> exception.<br>
+</div>
+<pre><span id="VALassoc_default_warn"><span class="keyword">val</span> assoc_default_warn</span> : <code class="type">'a -> ('a * 'b) list -> 'b -> string -> 'b</code></pre><div class="info">
+same than <code class="code">List.assoc</code> but returns a default value instead of raising a
+    <code class="code">Not_found</code> exception.
+<p>
+
+    In case this is the default value that is returned, prints a warning.<br>
+</div>
+<br>
+<h5 id="5_Debug">Debug</h5><br>
+<pre><span id="VALwarning"><span class="keyword">val</span> warning</span> : <code class="type">string -> unit</code></pre><div class="info">
+prints a warning<br>
+</div>
+</body></html>

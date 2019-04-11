@@ -1,0 +1,5 @@
+(fun f5 PTR_int ()
+  (param PTR_int "p1" ())
+  (param PTR_float "p2" ())
+)
+

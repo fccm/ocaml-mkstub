@@ -1,0 +1,125 @@
+{ "kind": "function",
+  "func_name": "{(Func_name)}",
+  "func_return_type": "{(Func_return_type)}",
+  "func_hint": "{(Func_hint)}",
+  "func_arguments": {
+    "args_c_call": [\
+{<Args_C:,<{
+      { "arg_type": "{(Arg_type)}",
+        "arg_name": "{(Arg_name)}",
+        "arg_hint": "{(Arg_hint)}",
+      }\
+}>Args_C>}
+    \
+}>Args_C:after>}],
+    "args_wrapped": [\
+{<Args_wrap:,<{
+      { "arg_type": "{(Arg_type)}",
+        "arg_name": "{(Arg_name)}",
+        "arg_hint": "{(Arg_hint)}",
+      }\
+}>Args_wrap>}
+    \
+}>Args_wrap:after>}],
+    "args_status": [\
+{<Args_status:,<{
+      { "status_type": "{(Status_type)}",
+        "status_name": "{(Status_name)}",
+        "status_hint": "{(Status_hint)}",
+      }\
+}>Args_status>}
+    \
+}>Args_status:after>}],
+    "args_result": [\
+{<Args_result:,<{
+      { "res_type": "{(Res_type)}",
+        "res_name": "{(Res_name)}",
+        "res_hint": "{(Res_hint)}",
+      }\
+}>Args_result>}
+    \
+}>Args_result:after>}],
+    "args_len": [\
+{<Args_len:,<{
+      "arg_len": {
+        "arg_len_type": "{(Arg_len_type)}",
+        "arg_len_name": "{(Arg_len_name)}",
+        "arg_len_hint": "{(Arg_len_hint)}",
+        "arg_type": "{(Arg_type)}",
+        "arg_name": "{(Arg_name)}",
+        "arg_hint": "{(Arg_hint)}",
+      }\
+}>Args_len>}
+    \
+}>Args_len:after>}],
+  },
+
+  "func_results": {
+    // Empty if return void
+    "return": [\
+{<Return<{
+      { "func_return_type": "{(Func_return_type)}",
+        "func_return_name": "{(Func_return_name)}",
+        "func_return_hint": "{(Func_return_hint)}" }\
+}>Return>}
+    \
+}>Return:after>}],
+
+    // All results
+    "results": [\
+{<Results:,<{
+      { "res_type": "{(Res_type)}",
+        "res_name": "{(Res_name)}",
+        "res_hint": "{(Res_hint)}",
+      }\
+}>Results>}
+    \
+}>Results:after>}],
+
+    // If zero result
+    "zero_result":\
+{<Zero_result:: "false"<{ "true"\
+}>Zero_result>},
+
+    // If exactly one result
+    "one_result": [\
+{<One_result:,<{
+      { "res_type": "{(Res_type)}",
+        "res_name": "{(Res_name)}",
+        "res_hint": "{(Res_hint)}" }\
+}>One_result>}
+    \
+}>One_result:after>}],
+
+    // If only 1 result and this result comes from an argument
+    "one_result_arg":\
+{<One_result_arg:before<{ "same than 'results' field"\
+{<One_result_arg:: "empty"<{\
+}>One_result_arg>},
+
+    // If only 1 result and this result is from the return of the function call
+    "one_result_return":\
+{<One_result_return:before<{ "same than 'results' field"\
+{<One_result_return:: "empty"<{\
+}>One_result_return>},
+
+    // If 2 or more results
+    "multi_results":\
+{<Multi_results:before<{ "same than 'results' field"\
+{<Multi_results:: "empty"<{\
+}>Multi_results>},
+
+    // If 2 or more results and these results come from pointer arguments
+    "multi_results_arg":\
+{<Multi_results_arg:before<{ "same than 'results' field"\
+{<Multi_results_arg:: "empty"<{\
+}>Multi_results_arg>},
+
+    // If 2 or more results and these results include the function return
+    "multi_results_return":\
+{<Multi_results_return:before<{ "same than 'results' field"\
+{<Multi_results_return:: "empty"<{\
+}>Multi_results_return>},
+  },
+}
+,

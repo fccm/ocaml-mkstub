@@ -1,0 +1,88 @@
+======@ Worth?
+
+Is this attempt worth?
+Should I continue?
+
+
+======@ Currently...
+
+hxtr is currently only a rewriting tool.
+It rewrites the gccxml input into other formating.
+It is not more clever than that.
+
+We may possibly use it in conjunction with C macro
+  to handle the simplest cases, but it's unable to
+  handle complicated cases, because it doesn't
+  contain any logic.  It only rewrites the input.
+
+
+======@ Which Direction?
+
+I'm not sure about the direction to take.
+
+I would think that it would be best to keep it
+  close to its current state, only read/formating
+  from gccxml  ,   and make a second layer on top
+  of it.
+This other layer on top of hxtr would then have
+  a prepared input tailored for what it has to do.
+
+Such a solution would have the advantage that the base
+  layer is not ocaml centric.
+
+I would also think that the headers should only be
+  annotated with informations that are not ocaml
+  centric, with hope to share it.
+
+
+======@ Which Design?
+
+There could be a lot of possibilities of how to design
+  the upper layer.
+If you have ideas about possibilities, or if you have
+  opinions about how it should be made, or if you just
+  have suggestions, please send me an email about it!
+
+
+======@ Just Ideas...
+
+The user could give instructions trough a given simple
+  text file, for example the name of an enum could be
+  followed by: 'wrap_as_poly_var'
+The name of a structure could be followed by:
+  'wrap_as_pointer', 'alloc_in_ocaml_memory'
+The name of a parameter could be followed by:
+
+
+====[ Example instruction file:
+
+ENUM:theEnumName = wrap_as_poly_var
+ENUM:anotherEnum = wrap_as_variant
+ENUM:someEnum:enumVal = ignore
+
+STRUCT:stName = wrap_as_pointer
+STRUCT:stName = finalizer_is(some_other_func)
+STRUCT:someStc:someField = ignore
+
+PARAM:someFunc:param3 = default_value_is(42)
+PARAM:otherFunc:param2 = is_bit_field
+PARAM:fooFunc:param0 = is_optional(NULL)
+PARAM:barFunc:param2 = dont_wrap_put(0)
+
+TYPE:someT = \
+  ml_conv(map_t_func); \
+  c_conv(conv_t_macro); \
+  ml_name(some_t)
+
+FUNC:bazFunc = ignore
+
+TEST:exFunc = params(2,3); return(5); label(tells)
+
+TEST:barFunc:ml = params(1,2); return(3)
+TEST:barFunc:C = params(1,2,0); return(3)
+
+TEST:barFunc = \
+  ml_params(1,2); \
+  c_params(1,2,0); \
+  return(3)
+

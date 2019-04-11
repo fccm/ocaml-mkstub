@@ -1,0 +1,371 @@
+.TH "HXTR" "1" "2012-09-17" "C header extractor - alpha" "User Command"
+.SH "NAME"
+\fIhxtr\fP \- a simple extractor for C header files.
+.
+.SH "SYNOPSIS"
+\fBhxtr\fP
+[\fB\-ix <file.xml>\fP]
+[\fB\-ih <file.h>\fP]
+[\fB\-I </dir/include>\fP]
+[\fB\-tp\-f <function\-template.tp>\fP]
+[\fB\-tp\-e <enum\-template.tp>\fP]
+[\fB\-tp\-s <struct\-template.tp>\fP]
+[\fB\-tp\-u <union\-template.tp>\fP]
+[\fB\-vc <var\-chars>\fP]
+[\fB\-rc <rep\-chars>\fP]
+[\fB\-x <exclude\-file.list>\fP]
+[\fB\-xs <exclude\-string\-list>\fP]
+[\fB\-ls <func\-name\-selection>\fP]
+[\fB\-cs <spliter\-char>\fP]
+[\fB\-rp <prefix>\fP]
+[\fB\-cmd <command>\fP]
+[\fB\-fs\fP]
+[\fB\-err\fP]
+[\fB\-copying\fP]
+.PP 
+The output is on \fIstdout\fP.
+.
+.SH "DESCRIPTION"
+\fIhxtr\fP is a simple tool whose goal is to help generating bindings
+for C/C++ libraries.
+.br 
+It uses the result of \fIgccxml\fP.
+\fIgccxml\fP is a tool that reads C/C++ header files and outputs its
+contents formated in XML.
+.br 
+\fIhxtr\fP uses a template system to generate its output from this XML.
+It can prints the results back with different formatings.
+.
+.
+.SH "OPTIONS"
+These command line options are available:
+.PP 
+  \fB\-ix\fP <file.xml>
+  \fB\-\-in\-xml\fP <file.xml>
+            Input XML file produced by gccxml.
+.PP 
+  \fB\-ih\fP <file.h>
+  \fB\-\-in\-h\fP <file.h>
+            Input a C/C++ header file.
+            (A pipe through gccxml will be done to get its XML output.)
+.PP 
+  \fB\-I\fP </dir/include>
+  \fB\-\-inc\fP </dir/include>
+            An include directory that gccxml should be aware of.
+            (Used only in conjunction with \-ih)
+.PP 
+  \fB\-tp\-f\fP <function\-template.tp>
+  \fB\-fun\-tmpl\fP <function\-template.tp>
+  \fB\-\-function\-template\fP <function\-template.tp>
+            Template for function generation.
+            See the \fITEMPLATE\fP sections.
+.PP 
+  \fB\-tp\-e\fP <enum\-template.tp>
+  \fB\-enum\-tmpl\fP <enum\-template.tp>
+  \fB\-\-enum\-template\fP <enum\-template.tp>
+            Template for enum generation.
+            See the \fITEMPLATE\fP sections.
+.PP 
+  \fB\-tp\-s\fP <struct\-template.tp>
+  \fB\-st\-tmpl\fP <struct\-template.tp>
+  \fB\-\-struct\-template\fP <struct\-template.tp>
+            Template for struct generation.
+            See the \fITEMPLATE\fP sections.
+.PP 
+  \fB\-tp\-u\fP <union\-template.tp>
+  \fB\-union\-tmpl\fP <union\-template.tp>
+  \fB\-\-union\-template\fP <union\-template.tp>
+            Template for union generation.
+            See the \fITEMPLATE\fP sections.
+.PP 
+  \fB\-vc\fP <var\-chars>
+  \fB\-\-var\-chars\fP <var\-chars>
+            Characters for the var tags.
+            See the \fITEMPLATE TAGS\fP sections.
+.PP 
+  \fB\-rc\fP <rep\-chars>
+  \fB\-\-rep\-chars\fP <rep\-chars>
+            Characters for the list/repeat tags.
+            See the \fITEMPLATE TAGS\fP sections.
+.PP 
+  \fB\-x\fP <exclude\-file.list>
+  \fB\-\-exclude\fP <exclude\-file.list>
+            A filename containing a list of functions to ignore.
+            This file should contain one function name by line,
+            (only the function name).
+            See the \fIEXCLUDE\fP section to see how to generate some
+            for the stdlib and others.
+.PP 
+  \fB\-xs\fP <exclude\-string\-list>
+            Same than \fI\-x\fP but gives the function names on the
+            command line instead of in a file.
+            The default separator character is ':', but you can
+            change it with the option \fI\-cs\fP.
+.PP 
+  \fB\-ls\fP <func\-name\-selection>
+  \fB\-\-only\fP <func\-name\-selection>
+            Select only these functions for the output.
+            The default separator character is ':', but you can
+            change it with the option \fI\-cs\fP.
+.PP 
+  \fB\-cs\fP <spliter\-char>
+  \fB\-\-char\-split\fP <spliter\-char>
+            Separator character for the options \fI\-xs\fP and  \fI\-ls\fP.
+.PP 
+  \fB\-rp\fP <prefix>
+  \fB\-\-remove\-prefix\fP <prefix>
+            Remove a prefix from function names.
+.PP 
+  \fB\-cmd\fP <command>
+  \fB\-\-command\fP <command>
+            Filter external command.
+            See the \fIFILTER COMMAND\fP section.
+.PP 
+  \fB\-fs\fP
+  \fB\-\-failsafe\fP
+            Failsafe mode.
+.PP 
+  \fB\-err\fP
+  \fB\-\-err\-fail\fP
+            Fail on error mode.
+.PP 
+  \fB\-copy\fP
+  \fB\-\-copying\fP
+  \fB\-\-copyright\fP
+  \fB\-\-license\fP
+            Print the license and the copyright.
+.
+\" TODO
+\"  \fB\-flt\fP <filter>
+\"  \fB\-\-filter\fP <filter>
+.
+.SH "FILES"
+By default the template files are in the directory:
+.br 
+    \fB/usr/share/hxtr/templates\fP
+.
+.
+.SH "TEMPLATING"
+Templates are used to generate the output.
+.br 
+In the templates, the elements of the form \fB{(Name)}\fP are replaced by
+variable contents.
+.br 
+For example in the function template the tag \fB{(Fun_name)}\fP is replaced by
+the name of the current function.
+.br 
+Repetitions over a list of elements are done this way:
+    \fB{<List_repeat<{\fP
+        \fB{(Element_of_the_list)}\fP
+    \fB}>List_repeat>}\fP
+.PP 
+This block is repeated for every element of the list, and the tags inside this
+block are replaced by the elements of the list.
+.PP 
+Inside every repetition block a tag \fB{(i)}\fP is available for convenience
+that is replaced by the number of the iteration (from 0 to n\-1).
+(There is also \fB{(j)}\fP which numbering is from 1 to n.)
+.
+.
+.SS "JOINING LISTS"
+    \fB{<Items_list:JOIN<{  {(Item)}  }>Items_list>}\fP
+.PP 
+Joins the items of the list with the string "JOIN":
+.br 
+    \fB"  foo  JOIN  bar  JOIN  baz  JOIN  qux  "\fP
+.
+.
+.SS "ALTERNATIVE FOR EMPTY LISTS"
+    \fB{<Items_list:JOIN:EMPTY<{  {(Item)}  }>Items_list>}\fP
+.PP 
+If the list doesn't contain any element, output the alternative string
+"EMPTY":
+.br 
+    \fB"EMPTY"\fP
+.br 
+Here "JOIN" can be an empty string:
+.br 
+    \fB{<Items_list::EMPTY<{  {(Item)}  }>Items_list>}\fP
+.
+.
+.
+.SH "FUNCTION TEMPLATES"
+The following tags are available in the function template:
+    \fB{(Fun_name)}\fP         The function name.
+    \fB{(Fun_return_type)}\fP  The type of the returned value.
+.PP 
+The iteration over the list of arguments is made with:
+    \fB{<Args<{\fP
+    \fB}>Args>}\fP
+.br 
+Inside this iteration, the following tags are available:
+    \fB{<Args<{\fP
+        \fB{(Param_name)}\fP
+        \fB{(Param_type)}\fP
+    \fB}>Args>}\fP
+.PP 
+The number of elements in the \fIArgs\fP list is provided with:
+    \fB{(Args_len)}\fP
+.PP 
+Provide the file name of this template to hxtr with the
+option \fB\-tp\-f\fP.
+.
+.
+.
+.SH "ENUM TEMPLATES"
+The following tags are available in the enum template:
+    \fB{(Enum_name)}\fP      The enum name.
+.PP 
+The enumaration:
+    \fB{<Enum_list<{\fP
+        \fB{(Enum_val_name)}\fP
+        \fB{(Enum_val_init)}\fP    Its actual value.
+    \fB}>Enum_list>}\fP
+.PP 
+The number of elements in the \fIEnum_list\fP list is provided with:
+    \fB{(Enum_list_len)}\fP
+.
+.
+.
+.SH "STRUCT TEMPLATES"
+The following tags are available in the struct template:
+.PP 
+    \fB{(Struct_name)}\fP
+.PP 
+    \fB{<Struct_fields<{\fP
+        \fB{(Field_name)}\fP
+        \fB{(Field_type)}\fP
+    \fB}>Struct_fields>}\fP
+.
+.
+.
+.SH "TEMPLATE TAGS"
+By default var tags are identified like \fB{(Tag)}\fP
+but if you would prefer to have \fB@[Tag]@\fP
+then use the parameter \fB\-\-var\-chars "@[]@"\fP.
+.PP 
+To customise repeat tags, use \fB\-\-rep\-chars\fP
+(its default is \fB"{<:<{}>>}"\fP).
+.PP 
+With \fB\-\-rep\-chars "[@$[@]@]@"\fP the template will be:
+.PP 
+    \fB[@Repeat$Join$Empty[@\fP
+    \fB]@Repeat]@\fP
+.
+.
+.
+.SH "FILTER COMMAND"
+It is possible to provide an external command with the
+\fB\-cmd\fP option.  This program, command or script is called when
+a template contains a cmd:* tag
+(for example {(cmd:Fun_name)} for {(Fun_name)}).
+This external program or script is then called with the argument
+"Fun_name <value>" and the result of this command will be put in
+{(cmd:Fun_name)}.  This command will be called for every function names
+found in the input.
+For example with: \fB\-cmd "./myfilter.sh"\fP hxtr will call:
+.br 
+  './myfilter.sh Fun_name SomeFuncName'
+.br 
+If this command returns "some_func_name" then this result
+will replace the tag \fB{(cmd:Fun_name)}\fP in the function template.
+.PP 
+.br 
+For example the cmd: tags for function templates are:
+.
+    \fB{(cmd:Fun_name)}\fP
+    \fB{(cmd:Fun_return_type)}\fP
+    \fB{<Args<{\fP
+        \fB{(cmd:Param_name)}\fP
+        \fB{(cmd:Param_type)}\fP
+    \fB}>Args>}\fP
+.
+.
+.
+.SH "ANNOTATIONS"
+.
+Annotations can be added in the input header files.
+.br 
+See section \fIMETAINFO\fP of \fBman 1 gccxml\fP.
+.PP 
+.PP 
+For example in the \fIfunction template\fP these annotations are
+available with the tags:
+.PP 
+    \fB{(Fun_name)}\fP
+    \fB{(Fun_return_type)}\fP
+    \fB{<Fun_annots<{   {(Annot)}\fP
+    \fB}>Fun_annots>}\fP
+.PP 
+    \fB{<Args<{\fP
+        \fB{(Param_type)}\fP
+        \fB{(Param_name)}\fP
+        \fB{<Param_annots<{   {(Annot)}\fP
+        \fB}>Param_annots>}\fP
+    \fB}>Args>}\fP
+.
+.
+.
+.SS "ANNOTATION EXAMPLE"
+.HP
+  #if defined(__GCCXML__)
+  
+    #define  _in_  __attribute((gccxml("in")))
+    #define  _out_  __attribute((gccxml("out")))
+  
+  #else
+  
+    #define  _in_
+    #define  _out_
+  
+  #endif
+  
+  void some_func(_in_ int p, _out_ int *ret);
+.
+.
+\".SH "INSTRUCTIONS"
+.
+.SH "EXCLUDE"
+To exclude functions (for example functions from the \fIsdtlib\fP)
+just create a basic header file (for example my_exclu.h) with only:
+.br 
+  #include <sdtlib.h>
+.br 
+Then use gccxml:
+.br 
+  $ gccxml my_exclu.h \-fxml=my_exclu.xml
+.br 
+Create a function template with only:
+.br 
+  {(Fun_name)}
+.br 
+Then generate the exclude list with:
+.br 
+  $ hxtr \-ix my_exclu.xml \-tp\-f only_fun_name.tp > my_exclu.ex
+.br 
+This gives a list of functions that can be provided with the
+\fB\-x\fP option.
+.
+.
+.SH "SUGGESTIONS"
+In order to improve the project, I would be interested to receive
+suggestions.
+.
+.SH "SEE ALSO"
+  \fBgccxml\fP(1)
+.
+.SH "BUGS"
+There are probably some, but none is known by me yet.
+.
+.SH "AUTHOR"
+(C) 2012 Florent Monnier
+.
+.SH "LICENSE"
+The code is provided along the MIT license:
+.br 
+  https://secure.wikimedia.org/wikipedia/en/wiki/MIT_License#License_terms
+.PP 
+This software is provided "AS\-IS", without warranty of any kind.
+.
+.SH "CONTACT"
+email: <monnier.florent on gmail>

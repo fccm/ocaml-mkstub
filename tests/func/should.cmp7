@@ -1,0 +1,4 @@
+(fun f7 int ()
+  (param PTR_int "arr" ())
+)
+

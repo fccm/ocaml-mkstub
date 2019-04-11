@@ -1,0 +1,7 @@
+.PHONY: clean
+clean:
+	$(RM) *.[oa] *.cm[ioxa] *.cmx[as] *.so *.opt *.byte
+
+.PHONY: clean_baks
+clean_baks:
+	$(RM)  *~  */*~  */*/*~  */*/*/*~  */*/*/*/*~

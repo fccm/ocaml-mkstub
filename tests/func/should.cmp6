@@ -1,0 +1,4 @@
+(fun f6 PTR_char ()
+  (param PTR_char "p" ())
+)
+

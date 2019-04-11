@@ -1,0 +1,9 @@
+---
+Struct:
+  St_name: {(Struct_name)}
+  Fields:{<Struct_fields:
+<{
+    - Field_type: {(Field_type)}
+      Field_name: {(Field_name)}
+      Field_annot:{<Field_annots<{
+        - {(Annot)}}>Field_annots>}}>Struct_fields>}

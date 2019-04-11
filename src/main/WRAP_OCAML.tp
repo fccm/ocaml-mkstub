@@ -1,0 +1,72 @@
+/* Wrap function: {(Func_name)} */
+
+CAMLprim value
+ocaml_{(Func_name)}(\
+{<Args_wrap:,:
+      value unit<{
+      value ml_p{(i)}_{(Arg_name)}\
+}>Args_wrap>} )
+{
+    CAMLparam{(len:Args_wrap)}(\
+{<Args_wrap:,<{
+       ml_p{(i)}_{(Arg_name)}\
+}>Args_wrap>} );\
+
+{<Multi_results:before<{    CAMLlocal1( ml_ret_multi );
+{<Multi_results<{
+}>Multi_results>}\
+\
+    CAMLlocal{(len:Args_result)}(\
+{<Args_result:,<{
+        ml_p{(i)}_{(Res_name)}\
+}>Args_result>} );
+\
+{<Return<{    CAMLlocal1( ml_{(Func_return_name)} );
+}>Return>}\
+
+{<Return<{    {(Func_return_type)} {(Func_return_name)};
+}>Return>}\
+
+    /* declarations */
+{<Args_C::    /* Empty */
+<{    DEC_{(Arg_type)}( p{(i)}_{(Arg_name)} );
+}>Args_C>}\
+
+    /* convert arguments */
+{<Args_wrap::    /* Empty */
+<{    conv_{(Arg_type)}_ml2c( ml_p{(i)}_{(Arg_name)}, & p{(i)}_{(Arg_name)} );
+}>Args_wrap>}\
+
+    /* function call */
+{<Return<{    {(Func_return_name)} =
+  }>Return>}\
+    {(Func_name)}(\
+{<Args_C:, <{
+          p{(i)}_{(Arg_name)}\
+}>Args_C>} );
+
+    /* convert results */
+{<Args_result<{    conv_{(Res_type)}_c2ml( p{(i)}_{(Res_name)}, & ml_p{(i)}_{(Res_name)} );
+}>Args_result>}\
+{<Return<{    conv_{(Func_return_type)}_c2ml( {(Func_return_name)}, & ml_{(Func_return_name)} );
+}>Return>}\
+
+{<Multi_results:before<{    ml_ret_multi = caml_alloc_tuple({(len:Results)});
+{<Multi_results<{    Store_field( ml_ret_multi, {(i)}, ml_p{(i)}_{(Res_name)} );
+}>Multi_results>}\
+\
+{<Args_result<{
+}>Args_result>}\
+
+{<Return<{    CAMLreturn( ml_{(Func_return_name)} );
+}>Return>}\
+\
+{<Zero_result<{    CAMLreturn( Val_unit );
+}>Zero_result>}\
+\
+{<Multi_results<{
+}>Multi_results>}
+    CAMLreturn( ml_ret_multi );\
+}>Multi_results:after>}
+}
+

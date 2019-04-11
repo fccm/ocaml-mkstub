@@ -1,0 +1,9 @@
+{ "kind": "enum",
+  "enum_name": "{(Enum_name)}",
+  "enum_values": [{<Enum_list:,<{
+    { "enum_val_name": "{(Enum_val_name)}",
+      "enum_val_init": "{(Enum_val_init)}"
+    }}>Enum_list>}
+  ]
+}
+,

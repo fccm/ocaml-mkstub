@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DIRNAME="`dirname $0`"
+DIR="$DIRNAME/.."
+
+HXTR="$DIRNAME/hxtr"
+TD="$DIR/share/templates/fmt/json"
+
+$HXTR \
+   -tp-f $TD/json_func.tp \
+   -tp-e $TD/json_enum.tp \
+   -tp-s $TD/json_struct.tp \
+   $*

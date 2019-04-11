@@ -1,0 +1,4 @@
+(fun f3 int ()
+  (param int "p" ())
+)
+

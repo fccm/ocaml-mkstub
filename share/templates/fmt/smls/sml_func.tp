@@ -1,0 +1,5 @@
+(fun "{(Fun_name)}" "{(Fun_return_type)}"
+  ({<Fun_annots: <{"{(Annot)}"}>Fun_annots>})
+{<Args<{  (param "{(Param_type)}" "{(Param_name)}" ({<Param_annots: <{"{(Annot)}"}>Param_annots>}))
+}>Args>})
+

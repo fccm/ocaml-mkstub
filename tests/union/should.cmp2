@@ -1,0 +1,11 @@
+(union "my_un2"
+  (members
+    (member "size" "ARR_char"
+      (annots )
+    )
+    (member "align" "long int"
+      (annots )
+    )
+  )
+)
+

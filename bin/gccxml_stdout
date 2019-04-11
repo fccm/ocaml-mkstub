@@ -1,0 +1,3 @@
+#!/bin/sh
+
+gccxml $1 -fxml=/dev/stdout

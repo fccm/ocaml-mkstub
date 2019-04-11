@@ -1,0 +1,111 @@
+---
+Function:
+  Func_name: {(Func_name)}
+  Func_return_type: {(Func_return_type)}
+  Func_hint: {(Func_hint)}
+  Func_args:
+    Args_C_call:
+{<Args_C:
+<{\
+      - Arg_type: {(Arg_type)}
+        Arg_name: {(Arg_name)}
+        Arg_hint: {(Arg_hint)}
+}>Args_C>}\
+
+    Args_wrapped:
+{<Args_wrap:
+<{\
+      - Arg_type: {(Arg_type)}
+        Arg_name: {(Arg_name)}
+        Arg_hint: {(Arg_hint)}
+}>Args_wrap>}\
+
+    Args_status:
+{<Args_status:
+<{\
+      - Status_type: {(Status_type)}
+        Status_name: {(Status_name)}
+        Status_hint: {(Status_hint)}
+}>Args_status>}\
+
+    Args_result:
+{<Args_result:
+<{\
+      - Res_type: {(Res_type)}
+        Res_name: {(Res_name)}
+        Res_hint: {(Res_hint)}
+}>Args_result>}\
+
+    Args_len:
+{<Args_len:
+<{\
+      - Arg_len:
+          Arg_len_type: {(Arg_len_type)}
+          Arg_len_name: {(Arg_len_name)}
+          Arg_len_hint: {(Arg_len_hint)}
+          Arg_type: {(Arg_type)}
+          Arg_name: {(Arg_name)}
+          Arg_hint: {(Arg_hint)}
+}>Args_len>}\
+
+  Func_results:
+    # Empty if return void
+    Return:
+{<Return<{\
+      - Func_return_type: {(Func_return_type)}
+        Func_return_name: {(Func_return_name)}
+        Func_return_hint: {(Func_return_hint)}
+}>Return>}\
+
+    # All results
+    Results:
+{<Results:
+<{\
+      - Res_type: {(Res_type)}
+        Res_name: {(Res_name)}
+        Res_hint: {(Res_hint)}
+}>Results>}\
+
+    # If zero result
+    Zero_result:\
+{<Zero_result:: false<{ true\
+}>Zero_result>}
+
+    # If exactly one result
+    One_result:
+{<One_result<{\
+      - Res_type: {(Res_type)}
+        Res_name: {(Res_name)}
+        Res_hint: {(Res_hint)}
+}>One_result>}\
+
+    # If only 1 result and this result comes from an argument
+    One_result_arg:
+{<One_result_arg:before<{      Contents: "Same than Results"
+{<One_result_arg<{\
+}>One_result_arg>}\
+
+    # If only 1 result and this result is from the return of the function call
+    One_result_return:
+{<One_result_return:before<{      Contents: "Same than Results"
+{<One_result_return<{\
+}>One_result_return>}\
+
+    # If 2 or more results, same than Results
+    Multi_results:
+{<Multi_results:before<{      Contents: "Same than Results"
+{<Multi_results<{\
+}>Multi_results>}\
+
+    # If 2 or more results and these results come from pointer arguments
+    Multi_results_arg:
+{<Multi_results_arg:before<{      Contents: "Same than Results"
+{<Multi_results_arg<{\
+}>Multi_results_arg>}\
+
+    # If 2 or more results and these results include the function return
+    Multi_results_return:
+{<Multi_results_return:before<{      Contents: "Same than Results"
+{<Multi_results_return<{\
+}>Multi_results_return>}\
+

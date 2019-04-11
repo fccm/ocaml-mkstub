@@ -1,0 +1,6 @@
+(enum
+  (e_name "{(Enum_name)}")
+{<Enum_list<{  (e_val {(i)} "{(Enum_val_name)}" {(Enum_val_init)})
+}>Enum_list>}
+)
+

@@ -1,0 +1,19 @@
+
+/* Conversions of struct: {(Struct_name)} */
+
+void conv_{(Struct_name)}_ml2c(value ml_st, {(Struct_name)} *st)
+{
+{<Struct_fields<{    conv_{(Field_type)}_ml2c( & st->{(Field_name)}, Field(ml_st,{(i)}) );
+}>Struct_fields>}}
+
+void conv_{(Struct_name)}_c2ml(value ml_st, {(Struct_name)} *st)
+{
+{<Struct_fields<{    value ml_{(Field_name)};
+}>Struct_fields>}
+{<Struct_fields<{    conv_{(Field_type)}_c2ml( ml_{(Field_name)}, & st->{(Field_name)} );
+}>Struct_fields>}
+    ml_st = caml_alloc_tuple( {(Struct_fields_len)} );
+{<Struct_fields<{    Store_field( ml_st, {(i)}, ml_{(Field_name)} );
+}>Struct_fields>}}
+
+

@@ -1,0 +1,76 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><title>H_repr_t</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;f_arg_c_call&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argc_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argc_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argc_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;f_return&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;f_arg_len&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argl_len_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argl_len_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argl_len_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argl_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argl_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argl_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;f_arg_wrap&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argw_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argw_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;argw_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;f_result&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;res_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;status&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;status_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;func&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_hint&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_return&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.f_return;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_return_is_void&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_return_is_status&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_args_c_call&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.f_arg_c_call&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_args_wrap&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.f_arg_wrap&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_args_len&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.f_arg_len&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_args_result&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.f_result&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_args_status&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.status&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_all_results&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.f_result&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;f_all_statuses&nbsp;:&nbsp;<span class="constructor">H_repr_t</span>.status&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+<span class="keyword">end</span></code></body></html>

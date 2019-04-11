@@ -1,0 +1,13 @@
+stdlib.h
+stdio.h
+string.h
+strings.h
+ctype.h
+math.h
+signal.h
+inttypes.h
+iconv.h
+sys/select.h
+sys/time.h
+sys/types.h
+unistd.h

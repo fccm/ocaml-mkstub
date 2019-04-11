@@ -1,0 +1,16 @@
+{ "kind": "function",
+  "fun_name":     "{(Fun_name)}",
+  "fun_ret_type": "{(Fun_return_type)}",
+  "fun_annots": [{<Fun_annots:,<{
+    { "annot": "{(Annot)}" }}>Fun_annots>}
+  ],
+  "params": [{<Args:,<{
+    { "param_type":  "{(Param_type)}",
+      "param_name":  "{(Param_name)}",
+      "param_annots": [{<Param_annots:,<{
+        { "annot": "{(Annot)}" }}>Param_annots>}
+      ]
+    }}>Args>}
+  ]
+}
+,

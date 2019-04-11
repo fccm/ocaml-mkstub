@@ -1,0 +1,865 @@
+# Warning: Struct(_666): attribute name not found
+# Warning: Struct(_691): attribute name not found
+# Warning: Struct(_692): attribute name not found
+# Warning: Struct(_771): attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Constructor: attribute name not found
+# Warning: Item discarded from list map
+# Warning: Item discarded from list map
+# Warning: Item discarded from list map
+# Warning: Item discarded from list map
+# Warning: Item discarded from list map
+# Warning: struct_of_gx: id:_808 not found
+# Warning: struct_of_gx: id:_809 not found
+# Warning: struct_of_gx: id:_814 not found
+# Warning: struct_of_gx: id:_815 not found
+# Warning: struct_of_gx: id:_820 not found
+# Warning: struct_of_gx: id:_821 not found
+# Warning: struct_of_gx: id:_826 not found
+# Warning: struct_of_gx: id:_827 not found
+# Warning: struct_of_gx: id:_832 not found
+# Warning: struct_of_gx: id:_833 not found
+# Warning: struct_of_gx: id:_838 not found
+# Warning: struct_of_gx: id:_839 not found
+# Warning: struct_of_gx: id:_844 not found
+# Warning: struct_of_gx: id:_845 not found
+# Warning: struct_of_gx: id:_850 not found
+# Warning: struct_of_gx: id:_851 not found
+# Warning: struct_of_gx: id:_856 not found
+# Warning: struct_of_gx: id:_857 not found
+# Warning: struct_of_gx: id:_862 not found
+# Warning: struct_of_gx: id:_863 not found
+# Warning: struct_of_gx: id:_868 not found
+# Warning: struct_of_gx: id:_869 not found
+# Warning: struct_of_gx: id:_874 not found
+# Warning: struct_of_gx: id:_875 not found
+# Warning: struct_of_gx: id:_880 not found
+# Warning: struct_of_gx: id:_881 not found
+# Warning: struct_of_gx: id:_886 not found
+# Warning: struct_of_gx: id:_887 not found
+# Warning: struct_of_gx: id:_892 not found
+# Warning: struct_of_gx: id:_893 not found
+# Warning: struct_of_gx: id:_898 not found
+# Warning: struct_of_gx: id:_899 not found
+# Warning: struct_of_gx: id:_904 not found
+# Warning: struct_of_gx: id:_905 not found
+# Warning: struct_of_gx: id:_910 not found
+# Warning: struct_of_gx: id:_911 not found
+# Warning: struct_of_gx: id:_916 not found
+# Warning: struct_of_gx: id:_917 not found
+# Warning: struct_of_gx: id:_934 not found
+# Warning: struct_of_gx: id:_935 not found
+# Warning: struct_of_gx: id:_940 not found
+# Warning: struct_of_gx: id:_941 not found
+# Warning: struct_of_gx: id:_946 not found
+# Warning: struct_of_gx: id:_947 not found
+# Warning: struct_of_gx: id:_952 not found
+# Warning: struct_of_gx: id:_953 not found
+# Warning: struct_of_gx: id:_980 not found
+# Warning: struct_of_gx: id:_981 not found
+# Warning: struct_of_gx: id:_982 not found
+# Warning: struct_of_gx: id:_983 not found
+# Warning: struct_of_gx: id:_984 not found
+# Warning: struct_of_gx: id:_1010 not found
+# Warning: struct_of_gx: id:_1015 not found
+# Warning: struct_of_gx: id:_1016 not found
+# Warning: struct_of_gx: id:_1021 not found
+# Warning: struct_of_gx: id:_1022 not found
+# Warning: struct_of_gx: id:_1057 not found
+# Warning: struct_of_gx: id:_1058 not found
+# Warning: struct_of_gx: id:_1059 not found
+# Warning: struct_of_gx: id:_1060 not found
+# Warning: struct_of_gx: id:_1065 not found
+# Warning: struct_of_gx: id:_1074 not found
+# Warning: struct_of_gx: id:_1079 not found
+# Warning: struct_of_gx: id:_1084 not found
+# Warning: struct_of_gx: id:_1089 not found
+# Warning: struct_of_gx: id:_1094 not found
+# Warning: struct_of_gx: id:_1099 not found
+# Warning: struct_of_gx: id:_1104 not found
+# Warning: struct_of_gx: id:_1109 not found
+# Warning: struct_of_gx: id:_1114 not found
+# Warning: struct_of_gx: id:_1119 not found
+# Warning: struct_of_gx: id:_1124 not found
+# Warning: struct_of_gx: id:_1129 not found
+# Warning: struct_of_gx: id:_1134 not found
+# Warning: struct_of_gx: id:_1139 not found
+# Warning: struct_of_gx: id:_1144 not found
+# Warning: struct_of_gx: id:_1218 not found
+ S.FundT: char
+ S.Union: 
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Typedef: __type
+ S.Variable: __digits
+ S.Variable: __is_signed
+ S.Variable: __max
+ S.Variable: __min
+ S.Typedef: __type
+ S.Enum: ._28
+ S.Typedef: __type
+ S.Enum: ._29
+ S.Typedef: __type
+ S.Typedef: reference
+ S.Typedef: pointer
+ S.Typedef: difference_type
+ S.Typedef: value_type
+ S.Typedef: iterator_category
+ S.Typedef: __type
+ S.Enum: ._20
+ S.Typedef: __type
+ S.Enum: ._21
+ S.Typedef: __type
+ S.Enum: ._22
+ S.Typedef: __type
+ S.Enum: ._4
+ S.Typedef: __type
+ S.Enum: ._31
+ S.Typedef: __type
+ S.Enum: ._32
+ S.Typedef: __type
+ S.Enum: ._33
+ S.Typedef: __type
+ S.Enum: ._6
+ S.Typedef: __type
+ S.Enum: ._7
+ S.Typedef: __type
+ S.Enum: ._8
+ S.Typedef: __type
+ S.Enum: ._9
+ S.Typedef: __type
+ S.Enum: ._10
+ S.Typedef: __type
+ S.Enum: ._11
+ S.Typedef: __type
+ S.Enum: ._12
+ S.Typedef: __type
+ S.Enum: ._14
+ S.Typedef: __type
+ S.Enum: ._15
+ S.Typedef: __type
+ S.Enum: ._16
+ S.Typedef: __type
+ S.Enum: ._17
+ S.Typedef: __type
+ S.Enum: ._18
+ S.Typedef: __type
+ S.Enum: ._5
+ S.Typedef: __type
+ S.Enum: ._5
+ S.Typedef: __type
+ S.Enum: ._5
+ S.Typedef: __type
+ S.Enum: ._13
+ S.Struct: 
+ S.Struct: __pthread_mutex_s
+ S.Struct: 
+ S.Struct: 
+ S.Struct: 
+ S.Struct: __remove_unsigned&lt;char&gt;
+ S.Struct: __remove_unsigned&lt;unsigned char&gt;
+ S.Struct: __remove_unsigned&lt;short unsigned int&gt;
+ S.Struct: __remove_unsigned&lt;unsigned int&gt;
+ S.Struct: __remove_unsigned&lt;long unsigned int&gt;
+ S.Struct: __remove_unsigned&lt;long long unsigned int&gt;
+ S.Struct: __remove_unsigned&lt;bool&gt;
+ S.Struct: __remove_unsigned&lt;wchar_t&gt;
+ S.Struct: __promote&lt;long double,false&gt;
+ S.Struct: __promote&lt;double,false&gt;
+ S.Struct: __promote&lt;float,false&gt;
+ S.Struct: __add_unsigned&lt;char&gt;
+ S.Struct: __add_unsigned&lt;signed char&gt;
+ S.Struct: __add_unsigned&lt;short int&gt;
+ S.Struct: __add_unsigned&lt;int&gt;
+ S.Struct: __add_unsigned&lt;long int&gt;
+ S.Struct: __add_unsigned&lt;long long int&gt;
+ S.Struct: __add_unsigned&lt;bool&gt;
+ S.Struct: __add_unsigned&lt;wchar_t&gt;
+ S.Struct: __numeric_traits&lt;int&gt;
+ S.Struct: __numeric_traits_floating&lt;int&gt;
+ S.Struct: __conditional_type&lt;true,__gnu_cxx::__numeric_traits_integer&lt;int&gt;,__gnu_cxx::__numeric_traits_floating&lt;int&gt; &gt;
+ S.Struct: __numeric_traits_integer&lt;int&gt;
+ S.FundT: void
+ S.FundT: complex double
+ S.Struct: __si_class_type_info_pseudo
+ S.Struct: __class_type_info_pseudo
+ S.FundT: complex long double
+ S.FundT: complex float
+ S.FundT: wchar_t
+ S.FundT: bool
+ S.FundT: long double
+ S.FundT: float
+ S.FundT: double
+ S.Struct: __is_char&lt;char&gt;
+ S.Struct: __is_char&lt;wchar_t&gt;
+ S.Struct: __truth_type&lt;true&gt;
+ S.Struct: __true_type
+ S.Enum: ._56
+ S.Enum: ._55
+ S.Struct: __copy_move_backward&lt;false,false,std::random_access_iterator_tag&gt;
+ S.Struct: __copy_move&lt;false,false,std::random_access_iterator_tag&gt;
+ S.Struct: bidirectional_iterator_tag
+ S.Struct: __iter_swap&lt;true&gt;
+ S.Struct: iterator&lt;std::output_iterator_tag,void,void,void,void&gt;
+ S.Struct: __lc_rai&lt;std::random_access_iterator_tag,std::random_access_iterator_tag&gt;
+ S.Typedef: terminate_handler
+ S.Typedef: size_t
+ S.Struct: nothrow_t
+ S.Typedef: ptrdiff_t
+ S.Struct: output_iterator_tag
+ S.Struct: __is_floating&lt;float&gt;
+ S.Struct: __is_floating&lt;double&gt;
+ S.Struct: __is_floating&lt;long double&gt;
+ S.Struct: __is_void&lt;void&gt;
+ S.Struct: random_access_iterator_tag
+ S.Struct: __equal&lt;true&gt;
+ S.Struct: forward_iterator_tag
+ S.Struct: __is_byte&lt;char&gt;
+ S.Struct: __is_byte&lt;signed char&gt;
+ S.Struct: __is_byte&lt;unsigned char&gt;
+ S.Struct: __is_integer&lt;bool&gt;
+ S.Struct: __is_integer&lt;char&gt;
+ S.Struct: __is_integer&lt;signed char&gt;
+ S.Struct: __is_integer&lt;unsigned char&gt;
+ S.Struct: __is_integer&lt;wchar_t&gt;
+ S.Struct: __is_integer&lt;short int&gt;
+ S.Struct: __is_integer&lt;short unsigned int&gt;
+ S.Struct: __is_integer&lt;unsigned int&gt;
+ S.Struct: __is_integer&lt;long int&gt;
+ S.Struct: __is_integer&lt;long unsigned int&gt;
+ S.Struct: __is_integer&lt;long long int&gt;
+ S.Struct: __is_integer&lt;long long unsigned int&gt;
+ S.Struct: __is_integer&lt;long double&gt;
+ S.Struct: __is_integer&lt;double&gt;
+ S.Struct: __is_integer&lt;float&gt;
+ S.Struct: __is_integer&lt;int&gt;
+ S.Struct: _Destroy_aux&lt;true&gt;
+ S.Struct: _Destroy_aux&lt;false&gt;
+ S.Typedef: new_handler
+ S.Variable: nothrow
+ S.Struct: __lexicographical_compare&lt;true&gt;
+ S.Struct: __uninitialized_construct_buf_dispatch&lt;true&gt;
+ S.Struct: __uninitialized_construct_buf_dispatch&lt;false&gt;
+ S.Struct: __false_type
+ S.Typedef: unexpected_handler
+ S.Struct: input_iterator_tag
+ S.Typedef: __caddr_t
+ S.Typedef: __int32_t
+ S.Typedef: __clock_t
+ S.Typedef: __ino64_t
+ S.Typedef: dev_t
+ S.Typedef: __blksize_t
+ S.Typedef: comparison_fn_t
+ S.Typedef: ushort
+ S.Typedef: pthread_t
+ S.Typedef: __nlink_t
+ S.Typedef: __rlim_t
+ S.Typedef: __u_quad_t
+ S.Typedef: key_t
+ S.Typedef: off64_t
+ S.Union: pthread_rwlock_t
+ S.Struct: fd_set
+ S.Struct: ldiv_t
+ S.Union: pthread_mutex_t
+ S.Typedef: fd_mask
+ S.Typedef: __qaddr_t
+ S.Typedef: pthread_once_t
+ S.Variable: _ZTISt13bad_exception
+ S.Typedef: nlink_t
+ S.Typedef: __u_long
+ S.Typedef: __quad_t
+ S.Typedef: int8_t
+ S.Variable: rect1
+ S.Typedef: u_quad_t
+ S.Typedef: __off64_t
+ S.Typedef: __timer_t
+ S.Typedef: pthread_key_t
+ S.Typedef: id_t
+ S.Typedef: __fd_mask
+ S.Typedef: mode_t
+ S.Typedef: u_int16_t
+ S.Typedef: register_t
+ S.Typedef: int32_t
+ S.Typedef: int64_t
+ S.Typedef: __key_t
+ S.Typedef: __locale_t
+ S.Union: pthread_attr_t
+ S.Typedef: __uint8_t
+ S.Typedef: __gid_t
+ S.Typedef: __compar_fn_t
+ S.Variable: rect3
+ S.Variable: rect2
+ S.Typedef: __uid_t
+ S.Typedef: __u_char
+ S.Typedef: loff_t
+ S.Typedef: __fsfilcnt64_t
+ S.Typedef: size_t
+ S.Typedef: __clockid_t
+ S.Typedef: __fsblkcnt_t
+ S.Typedef: __int64_t
+ S.Typedef: ssize_t
+ S.Typedef: __fsblkcnt64_t
+ S.Typedef: locale_t
+ S.Typedef: int16_t
+ S.Typedef: caddr_t
+ S.Typedef: daddr_t
+ S.Typedef: blksize_t
+ S.Typedef: pid_t
+ S.Typedef: suseconds_t
+ S.Typedef: __off_t
+ S.Typedef: __time_t
+ S.Typedef: fsfilcnt64_t
+ S.Typedef: __u_int
+ S.Typedef: __blkcnt_t
+ S.Typedef: __fsfilcnt_t
+ S.Typedef: __ssize_t
+ S.Union: pthread_rwlockattr_t
+ S.Struct: timespec
+ S.Typedef: ulong
+ S.Typedef: __daddr_t
+ S.Typedef: blkcnt_t
+ S.Typedef: u_int64_t
+ S.Typedef: __uint32_t
+ S.Struct: lldiv_t
+ S.Typedef: __rlim64_t
+ S.Typedef: __pthread_slist_t
+ S.Union: wait
+ S.Typedef: fsblkcnt_t
+ S.Typedef: __blkcnt64_t
+ S.Typedef: __dev_t
+ S.Struct: __locale_data
+ S.Struct: div_t
+ S.Typedef: __pid_t
+ S.Typedef: u_int32_t
+ S.Typedef: u_int
+ S.Typedef: u_long
+ S.Typedef: quad_t
+ S.Typedef: __ino_t
+ S.Typedef: fsfilcnt_t
+ S.Typedef: __useconds_t
+ S.Typedef: u_short
+ S.Typedef: __compar_d_fn_t
+ S.Typedef: __int8_t
+ S.FundT: signed char
+ S.Typedef: fsid_t
+ S.Typedef: u_int8_t
+ S.Union: pthread_barrier_t
+ S.Union: pthread_cond_t
+ S.Typedef: timer_t
+ S.Typedef: gid_t
+ S.Typedef: __mode_t
+ S.Typedef: pthread_spinlock_t
+ S.Typedef: uint
+ S.Typedef: ino64_t
+ S.Typedef: uid_t
+ S.Typedef: __u_short
+ S.Struct: __locale_struct
+ S.Typedef: __uint16_t
+ S.FundT: short unsigned int
+ S.Typedef: u_char
+ S.FundT: unsigned char
+ S.Union: pthread_mutexattr_t
+ S.Typedef: off_t
+ S.Typedef: useconds_t
+ S.Struct: drand48_data
+ S.Typedef: __loff_t
+ S.Typedef: __int16_t
+ S.FundT: short int
+ S.Typedef: __socklen_t
+ S.Typedef: fsblkcnt64_t
+ S.Typedef: clockid_t
+ S.Typedef: __suseconds_t
+ S.Typedef: __intptr_t
+ S.Typedef: __sig_atomic_t
+ S.FundT: int
+ S.Struct: __fsid_t
+ S.Typedef: clock_t
+ S.Typedef: time_t
+ S.Typedef: __id_t
+ S.FundT: unsigned int
+ S.Typedef: __uint64_t
+ S.FundT: long long unsigned int
+ S.Typedef: ino_t
+ S.FundT: long unsigned int
+ S.Typedef: blkcnt64_t
+ S.FundT: long long int
+ S.Union: pthread_barrierattr_t
+ S.Struct: __pthread_internal_slist
+ S.Typedef: sigset_t
+ S.Struct: __sigset_t
+ S.Variable: _ZTISt9bad_alloc
+ S.Typedef: __swblk_t
+ S.FundT: long int
+ S.Variable: _ZTISt9exception
+ S.Union: pthread_condattr_t
+ S.Struct: random_data
+ S.Struct: timeval
+@ S.FundT: char
+@ S.Union: 
+@ S.FundT: __type
+@ S.FundT: __type
+@ S.FundT: __type
+@ S.FundT: __PTR_int___type_
+@ S.FundT: __PTR_long int___type_
+@ S.FundT: __type
+@ S.FundT: __PTR_long double___type_
+@ S.FundT: __PTR_double___type_
+@ S.FundT: __PTR_float___type_
+@ S.FundT: __type
+@ S.FundT: __type
+@ S.FundT: __PTR_short unsigned int___type_
+@ S.FundT: __PTR_unsigned int___type_
+@ S.FundT: __type
+@ S.FundT: __type
+@ S.Struct: __type
+@ S.FundT: __PTR_CONST_int___digits_
+@ S.FundT: __NOT_FOUND___is_signed_
+@ S.FundT: __PTR_CONST_int___max_
+@ S.FundT: __PTR_CONST_int___min_
+@ S.Struct: __type
+@ S.Enum: ._28
+@ S.Struct: __type
+@ S.Enum: ._29
+@ S.Struct: __type
+@ S.FundT: reference
+@ S.FundT: pointer
+@ S.FundT: difference_type
+@ S.FundT: value_type
+@ S.Struct: iterator_category
+@ S.Struct: __type
+@ S.Enum: ._20
+@ S.Struct: __type
+@ S.Enum: ._21
+@ S.Struct: __type
+@ S.Enum: ._22
+@ S.Struct: __type
+@ S.Enum: ._4
+@ S.Struct: __type
+@ S.Enum: ._31
+@ S.Struct: __type
+@ S.Enum: ._32
+@ S.Struct: __type
+@ S.Enum: ._33
+@ S.Struct: __type
+@ S.Enum: ._6
+@ S.Struct: __type
+@ S.Enum: ._7
+@ S.Struct: __type
+@ S.Enum: ._8
+@ S.Struct: __type
+@ S.Enum: ._9
+@ S.Struct: __type
+@ S.Enum: ._10
+@ S.Struct: __type
+@ S.Enum: ._11
+@ S.Struct: __type
+@ S.Enum: ._12
+@ S.Struct: __type
+@ S.Enum: ._14
+@ S.Struct: __type
+@ S.Enum: ._15
+@ S.Struct: __type
+@ S.Enum: ._16
+@ S.Struct: __type
+@ S.Enum: ._17
+@ S.Struct: __type
+@ S.Enum: ._18
+@ S.Struct: __type
+@ S.Enum: ._5
+@ S.Struct: __type
+@ S.Enum: ._5
+@ S.Struct: __type
+@ S.Enum: ._5
+@ S.Struct: __type
+@ S.Enum: ._13
+@ S.Struct: 
+@ S.Struct: __pthread_mutex_s
+@ S.Struct: 
+@ S.Struct: 
+@ S.Struct: 
+@ S.Struct: __remove_unsigned&lt;char&gt;
+@ S.Struct: __remove_unsigned&lt;unsigned char&gt;
+@ S.Struct: __remove_unsigned&lt;short unsigned int&gt;
+@ S.Struct: __remove_unsigned&lt;unsigned int&gt;
+@ S.Struct: __remove_unsigned&lt;long unsigned int&gt;
+@ S.Struct: __remove_unsigned&lt;long long unsigned int&gt;
+@ S.Struct: __remove_unsigned&lt;bool&gt;
+@ S.Struct: __remove_unsigned&lt;wchar_t&gt;
+@ S.Struct: __promote&lt;long double,false&gt;
+@ S.Struct: __promote&lt;double,false&gt;
+@ S.Struct: __promote&lt;float,false&gt;
+@ S.Struct: __add_unsigned&lt;char&gt;
+@ S.Struct: __add_unsigned&lt;signed char&gt;
+@ S.Struct: __add_unsigned&lt;short int&gt;
+@ S.Struct: __add_unsigned&lt;int&gt;
+@ S.Struct: __add_unsigned&lt;long int&gt;
+@ S.Struct: __add_unsigned&lt;long long int&gt;
+@ S.Struct: __add_unsigned&lt;bool&gt;
+@ S.Struct: __add_unsigned&lt;wchar_t&gt;
+@ S.Struct: __numeric_traits&lt;int&gt;
+@ S.Struct: __numeric_traits_floating&lt;int&gt;
+@ S.Struct: __conditional_type&lt;true,__gnu_cxx::__numeric_traits_integer&lt;int&gt;,__gnu_cxx::__numeric_traits_floating&lt;int&gt; &gt;
+@ S.Struct: __numeric_traits_integer&lt;int&gt;
+@ S.FundT: void
+@ S.FundT: complex double
+@ S.Struct: __si_class_type_info_pseudo
+@ S.Struct: __class_type_info_pseudo
+@ S.FundT: complex long double
+@ S.FundT: complex float
+@ S.FundT: wchar_t
+@ S.FundT: bool
+@ S.FundT: long double
+@ S.FundT: float
+@ S.FundT: double
+@ S.Struct: __is_char&lt;char&gt;
+@ S.Struct: __is_char&lt;wchar_t&gt;
+@ S.Struct: __truth_type&lt;true&gt;
+@ S.Struct: __true_type
+@ S.Enum: ._56
+@ S.Enum: ._55
+@ S.Struct: __copy_move_backward&lt;false,false,std::random_access_iterator_tag&gt;
+@ S.Struct: __copy_move&lt;false,false,std::random_access_iterator_tag&gt;
+@ S.Struct: bidirectional_iterator_tag
+@ S.Struct: __iter_swap&lt;true&gt;
+@ S.Struct: iterator&lt;std::output_iterator_tag,void,void,void,void&gt;
+@ S.Struct: __lc_rai&lt;std::random_access_iterator_tag,std::random_access_iterator_tag&gt;
+@ S.FundT: __NOT_FOUND_terminate_handler_
+@ S.FundT: __PTR_unsigned int_size_t_
+@ S.Struct: nothrow_t
+@ S.FundT: __PTR_int_ptrdiff_t_
+@ S.Struct: output_iterator_tag
+@ S.Struct: __is_floating&lt;float&gt;
+@ S.Struct: __is_floating&lt;double&gt;
+@ S.Struct: __is_floating&lt;long double&gt;
+@ S.Struct: __is_void&lt;void&gt;
+@ S.Struct: random_access_iterator_tag
+@ S.Struct: __equal&lt;true&gt;
+@ S.Struct: forward_iterator_tag
+@ S.Struct: __is_byte&lt;char&gt;
+@ S.Struct: __is_byte&lt;signed char&gt;
+@ S.Struct: __is_byte&lt;unsigned char&gt;
+@ S.Struct: __is_integer&lt;bool&gt;
+@ S.Struct: __is_integer&lt;char&gt;
+@ S.Struct: __is_integer&lt;signed char&gt;
+@ S.Struct: __is_integer&lt;unsigned char&gt;
+@ S.Struct: __is_integer&lt;wchar_t&gt;
+@ S.Struct: __is_integer&lt;short int&gt;
+@ S.Struct: __is_integer&lt;short unsigned int&gt;
+@ S.Struct: __is_integer&lt;unsigned int&gt;
+@ S.Struct: __is_integer&lt;long int&gt;
+@ S.Struct: __is_integer&lt;long unsigned int&gt;
+@ S.Struct: __is_integer&lt;long long int&gt;
+@ S.Struct: __is_integer&lt;long long unsigned int&gt;
+@ S.Struct: __is_integer&lt;long double&gt;
+@ S.Struct: __is_integer&lt;double&gt;
+@ S.Struct: __is_integer&lt;float&gt;
+@ S.Struct: __is_integer&lt;int&gt;
+@ S.Struct: _Destroy_aux&lt;true&gt;
+@ S.Struct: _Destroy_aux&lt;false&gt;
+@ S.FundT: __NOT_FOUND_new_handler_
+@ S.FundT: __NOT_FOUND_nothrow_
+@ S.Struct: __lexicographical_compare&lt;true&gt;
+@ S.Struct: __uninitialized_construct_buf_dispatch&lt;true&gt;
+@ S.Struct: __uninitialized_construct_buf_dispatch&lt;false&gt;
+@ S.Struct: __false_type
+@ S.FundT: __NOT_FOUND_unexpected_handler_
+@ S.Struct: input_iterator_tag
+@ S.FundT: __PTR_PTR_char___caddr_t_
+@ S.FundT: __PTR_int___int32_t_
+@ S.FundT: __PTR_long int___clock_t_
+@ S.Typedef: __ino64_t
+@ S.Typedef: dev_t
+@ S.FundT: __PTR_long int___blksize_t_
+@ S.Typedef: comparison_fn_t
+@ S.FundT: __PTR_short unsigned int_ushort_
+@ S.FundT: pthread_t
+@ S.FundT: __PTR_unsigned int___nlink_t_
+@ S.FundT: __rlim_t
+@ S.FundT: __u_quad_t
+@ S.Typedef: key_t
+@ S.Typedef: off64_t
+@ S.Union: pthread_rwlock_t
+@ S.Struct: fd_set
+@ S.Struct: ldiv_t
+@ S.Union: pthread_mutex_t
+@ S.Typedef: fd_mask
+@ S.FundT: __NOT_FOUND___qaddr_t_
+@ S.FundT: __PTR_int_pthread_once_t_
+@ S.FundT: __NOT_FOUND__ZTISt13bad_exception_
+@ S.Typedef: nlink_t
+@ S.FundT: __u_long
+@ S.FundT: __quad_t
+@ S.FundT: int8_t
+@ S.FundT: __NOT_FOUND_rect1_
+@ S.Typedef: u_quad_t
+@ S.FundT: __PTR___quad_t___off64_t_
+@ S.FundT: __PTR_PTR_void___timer_t_
+@ S.FundT: __PTR_unsigned int_pthread_key_t_
+@ S.Typedef: id_t
+@ S.FundT: __PTR_long int___fd_mask_
+@ S.Typedef: mode_t
+@ S.FundT: __PTR_short unsigned int_u_int16_t_
+@ S.FundT: __PTR_int_register_t_
+@ S.FundT: __PTR_int_int32_t_
+@ S.FundT: int64_t
+@ S.FundT: __PTR_int___key_t_
+@ S.FundT: __NOT_FOUND___locale_t_
+@ S.Union: pthread_attr_t
+@ S.FundT: __uint8_t
+@ S.FundT: __PTR_unsigned int___gid_t_
+@ S.FundT: __NOT_FOUND___compar_fn_t_
+@ S.FundT: __NOT_FOUND_rect3_
+@ S.FundT: __NOT_FOUND_rect2_
+@ S.FundT: __PTR_unsigned int___uid_t_
+@ S.FundT: __u_char
+@ S.Typedef: loff_t
+@ S.Typedef: __fsfilcnt64_t
+@ S.FundT: __PTR_unsigned int_size_t_
+@ S.FundT: __PTR_int___clockid_t_
+@ S.FundT: __fsblkcnt_t
+@ S.FundT: __int64_t
+@ S.Typedef: ssize_t
+@ S.Typedef: __fsblkcnt64_t
+@ S.Typedef: locale_t
+@ S.FundT: int16_t
+@ S.Typedef: caddr_t
+@ S.Typedef: daddr_t
+@ S.Typedef: blksize_t
+@ S.Typedef: pid_t
+@ S.Typedef: suseconds_t
+@ S.FundT: __PTR_long int___off_t_
+@ S.FundT: __PTR_long int___time_t_
+@ S.Typedef: fsfilcnt64_t
+@ S.FundT: __PTR_unsigned int___u_int_
+@ S.FundT: __PTR_long int___blkcnt_t_
+@ S.FundT: __fsfilcnt_t
+@ S.FundT: __PTR_int___ssize_t_
+@ S.Union: pthread_rwlockattr_t
+@ S.Struct: timespec
+@ S.FundT: ulong
+@ S.FundT: __PTR_int___daddr_t_
+@ S.Typedef: blkcnt_t
+@ S.FundT: u_int64_t
+@ S.FundT: __PTR_unsigned int___uint32_t_
+@ S.Struct: lldiv_t
+@ S.Typedef: __rlim64_t
+@ S.FundT: __PTR___pthread_internal_slist___pthread_slist_t_
+@ S.Union: wait
+@ S.Typedef: fsblkcnt_t
+@ S.FundT: __PTR___quad_t___blkcnt64_t_
+@ S.Typedef: __dev_t
+@ S.Struct: __locale_data
+@ S.Struct: div_t
+@ S.FundT: __PTR_int___pid_t_
+@ S.FundT: __PTR_unsigned int_u_int32_t_
+@ S.Typedef: u_int
+@ S.Typedef: u_long
+@ S.FundT: __PTR___quad_t_quad_t_
+@ S.FundT: __ino_t
+@ S.Typedef: fsfilcnt_t
+@ S.FundT: __PTR_unsigned int___useconds_t_
+@ S.Typedef: u_short
+@ S.FundT: __NOT_FOUND___compar_d_fn_t_
+@ S.FundT: __int8_t
+@ S.FundT: signed char
+@ S.Struct: fsid_t
+@ S.FundT: u_int8_t
+@ S.Union: pthread_barrier_t
+@ S.Union: pthread_cond_t
+@ S.Typedef: timer_t
+@ S.Typedef: gid_t
+@ S.FundT: __PTR_unsigned int___mode_t_
+@ S.FundT: __NOT_FOUND_pthread_spinlock_t_
+@ S.FundT: __PTR_unsigned int_uint_
+@ S.Typedef: ino64_t
+@ S.Typedef: uid_t
+@ S.FundT: __PTR_short unsigned int___u_short_
+@ S.Struct: __locale_struct
+@ S.FundT: __PTR_short unsigned int___uint16_t_
+@ S.FundT: short unsigned int
+@ S.Typedef: u_char
+@ S.FundT: unsigned char
+@ S.Union: pthread_mutexattr_t
+@ S.Typedef: off_t
+@ S.Typedef: useconds_t
+@ S.Struct: drand48_data
+@ S.Typedef: __loff_t
+@ S.FundT: __int16_t
+@ S.FundT: short int
+@ S.FundT: __PTR_unsigned int___socklen_t_
+@ S.Typedef: fsblkcnt64_t
+@ S.Typedef: clockid_t
+@ S.FundT: __PTR_long int___suseconds_t_
+@ S.FundT: __PTR_int___intptr_t_
+@ S.FundT: __PTR_int___sig_atomic_t_
+@ S.FundT: int
+@ S.Struct: __fsid_t
+@ S.Typedef: clock_t
+@ S.Typedef: time_t
+@ S.FundT: __PTR_unsigned int___id_t_
+@ S.FundT: unsigned int
+@ S.FundT: __uint64_t
+@ S.FundT: long long unsigned int
+@ S.Typedef: ino_t
+@ S.FundT: long unsigned int
+@ S.Typedef: blkcnt64_t
+@ S.FundT: long long int
+@ S.Union: pthread_barrierattr_t
+@ S.Struct: __pthread_internal_slist
+@ S.Struct: sigset_t
+@ S.Struct: __sigset_t
+@ S.FundT: __NOT_FOUND__ZTISt9bad_alloc_
+@ S.FundT: __PTR_long int___swblk_t_
+@ S.FundT: long int
+@ S.FundT: __NOT_FOUND__ZTISt9exception_
+@ S.Union: pthread_condattr_t
+@ S.Struct: random_data
+@ S.Struct: timeval
+print_typedef:
+  __ino64_t
+  long long unsigned int
+print_typedef:
+  dev_t
+  __u_quad_t
+print_typedef:
+  comparison_fn_t
+  PTR_GCCXML_ID__734
+print_typedef:
+  key_t
+  int
+print_typedef:
+  off64_t
+  __quad_t
+print_typedef:
+  fd_mask
+  long int
+print_typedef:
+  nlink_t
+  unsigned int
+print_typedef:
+  u_quad_t
+  long long unsigned int
+print_typedef:
+  id_t
+  unsigned int
+print_typedef:
+  mode_t
+  unsigned int
+print_typedef:
+  loff_t
+  __off64_t
+print_typedef:
+  __fsfilcnt64_t
+  long long unsigned int
+print_typedef:
+  ssize_t
+  int
+print_typedef:
+  __fsblkcnt64_t
+  long long unsigned int
+print_typedef:
+  locale_t
+  PTR___locale_struct
+print_typedef:
+  caddr_t
+  PTR_char
+print_typedef:
+  daddr_t
+  int
+print_typedef:
+  blksize_t
+  long int
+print_typedef:
+  pid_t
+  int
+print_typedef:
+  suseconds_t
+  long int
+print_typedef:
+  fsfilcnt64_t
+  __u_quad_t
+print_typedef:
+  blkcnt_t
+  long int
+print_typedef:
+  __rlim64_t
+  long long unsigned int
+print_typedef:
+  fsblkcnt_t
+  long unsigned int
+print_typedef:
+  __dev_t
+  long long unsigned int
+print_typedef:
+  u_int
+  unsigned int
+print_typedef:
+  u_long
+  long unsigned int
+print_typedef:
+  fsfilcnt_t
+  long unsigned int
+print_typedef:
+  u_short
+  short unsigned int
+print_typedef:
+  timer_t
+  PTR_void
+print_typedef:
+  gid_t
+  unsigned int
+print_typedef:
+  ino64_t
+  __u_quad_t
+print_typedef:
+  uid_t
+  unsigned int
+print_typedef:
+  u_char
+  unsigned char
+print_typedef:
+  off_t
+  long int
+print_typedef:
+  useconds_t
+  unsigned int
+print_typedef:
+  __loff_t
+  __quad_t
+print_typedef:
+  fsblkcnt64_t
+  __u_quad_t
+print_typedef:
+  clockid_t
+  int
+print_typedef:
+  clock_t
+  long int
+print_typedef:
+  time_t
+  long int
+print_typedef:
+  ino_t
+  long unsigned int
+print_typedef:
+  blkcnt64_t
+  __quad_t

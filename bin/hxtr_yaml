@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DIRNAME="`dirname $0`"
+DIR="$DIRNAME/.."
+
+HXTR="$DIRNAME/hxtr"
+TD="$DIR/share/templates/fmt/yaml"
+
+$HXTR \
+  -tp-f $TD/yaml_func.tp \
+  -tp-e $TD/yaml_enum.tp \
+  -tp-s $TD/yaml_struct.tp \
+  $*

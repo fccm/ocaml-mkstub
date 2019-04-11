@@ -1,0 +1,107 @@
+<function
+  func_name="{(Func_name)}"
+  func_return_type="{(Func_return_type)}"
+  func_hint="{(Func_hint)}">
+  <func_arguments>
+    <args_c_call>
+{<Args_C<{\
+      <arg
+        arg_type="{(Arg_type)}"
+        arg_name="{(Arg_name)}"
+        arg_hint="{(Arg_hint)}" />
+}>Args_C>}\
+    </args_c_call>
+    <args_wrapped>
+{<Args_wrap<{\
+      <arg
+        arg_type="{(Arg_type)}"
+        arg_name="{(Arg_name)}"
+        arg_hint="{(Arg_hint)}" />
+}>Args_wrap>}\
+    </args_wrapped>
+    <args_status>
+{<Args_status<{\
+      <status
+        status_type="{(Status_type)}"
+        status_name="{(Status_name)}"
+        status_hint="{(Status_hint)}" />
+}>Args_status>}\
+    </args_status>
+    <args_result>
+{<Args_result<{\
+      <result
+        res_type="{(Res_type)}"
+        res_name="{(Res_name)}"
+        res_hint="{(Res_hint)}" />
+}>Args_result>}\
+    </args_result>
+    <args_len>
+{<Args_len<{\
+      <arg_len
+          arg_len_type="{(Arg_len_type)}"
+          arg_len_name="{(Arg_len_name)}"
+          arg_len_hint="{(Arg_len_hint)}"
+          arg_type="{(Arg_type)}"
+          arg_name="{(Arg_name)}"
+          arg_hint="{(Arg_hint)}" />
+}>Args_len>}\
+    </args_len>
+  </func_arguments>
+  <func_results>
+{<Return<{
+    <!-- Empty if return void -->
+    <return
+      func_return_type="{(Func_return_type)}"
+      func_return_name="{(Func_return_name)}"
+      func_return_hint="{(Func_return_hint)}" />
+}>Return>}
+    <!-- All results -->
+    <results>
+{<Results<{\
+      <result
+        res_type="{(Res_type)}"
+        res_name="{(Res_name)}"
+        res_hint="{(Res_hint)}" />
+}>Results>}\
+    </results>
+    <!-- There's zero result -->
+    <zero_result>\
+{<Zero_result::false<{true\
+}>Zero_result>}</zero_result>
+{<One_result<{
+    <!-- There is exactly one result -->
+    <one_result
+      res_type="{(Res_type)}"
+      res_name="{(Res_name)}"
+      res_hint="{(Res_hint)}" />
+}>One_result>}
+{<One_result_arg<{\
+    <!-- There is only 1 result,
+         and this result comes from an argument -->
+    <one_result_arg contents="same than in the results tag" />
+}>One_result_arg>}\
+{<One_result_return<{\
+    <!-- There is only 1 result,
+         and this result is from the return of the function call -->
+    <one_result_return contents="same than in the results tag" />
+}>One_result_return>}\
+{<Multi_results:before<{\
+    <!-- There are 2 or more results -->
+    <multi_results contents="same than in the results tag" />
+{<Multi_results<{\
+}>Multi_results>}\
+{<Multi_results_arg:before<{\
+    <!-- There are 2 or more results,
+         and these results come from pointer arguments -->
+    <multi_results_arg contents="same than in the results tag" />
+{<Multi_results_arg<{\
+}>Multi_results_arg>}\
+{<Multi_results_return:before<{\
+    <!-- There are 2 or more results,
+         and these results include the function return -->
+    <multi_results_return contents="same than in the results tag" />
+{<Multi_results_return<{\
+}>Multi_results_return>}\
+  </func_results>
+</function>
+

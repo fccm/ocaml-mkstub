@@ -1,0 +1,6 @@
+(struct struct_first
+  (field int field_a1 ())
+  (field int field_b1 ())
+  (field int field_c1 ())
+)
+

@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Gccxml_cnt.html">
+<link rel="next" href="Parse_in.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><title>Repr_t</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Gccxml_cnt.html" title="Gccxml_cnt">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Parse_in.html" title="Parse_in">Next</a>
+</div>
+<h1>Module <a href="type_Repr_t.html">Repr_t</a></h1>
+<pre><span class="keyword">module</span> Repr_t: <code class="code">sig</code> <a href="Repr_t.html">..</a> <code class="code">end</code></pre><div class="info">
+Representation of the contents of a C header file<br>
+</div>
+<hr width="100%">
+<pre><span id="TYPEid"><span class="keyword">type</span> <code class="type"></code>id</span> = <code class="type">string</code> </pre>
+
+<pre><code><span id="TYPEarg"><span class="keyword">type</span> <code class="type">'a</code> arg</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarg.arg_type">arg_type</span>&nbsp;:<code class="type">'a</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the type of the argument</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarg.arg_name">arg_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >name of the argument</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarg.arg_annot">arg_annot</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >annotation for the argument</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+argument of a function<br>
+</div>
+
+<pre><code><span id="TYPEfunc"><span class="keyword">type</span> <code class="type">'a</code> func</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTfunc.f_name">f_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >name of the function</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTfunc.f_ret">f_ret</span>&nbsp;:<code class="type">'a</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the type of the return</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTfunc.f_annot">f_annot</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >annotation for the function</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTfunc.f_args">f_args</span>&nbsp;:<code class="type">'a <a href="Repr_t.html#TYPEarg">arg</a> list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >arguments</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+a function<br>
+</div>
+
+<pre><code><span id="TYPEenum_val"><span class="keyword">type</span> <code class="type"></code>enum_val</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenum_val.ev_name">ev_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenum_val.ev_init">ev_init</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+value of an enum<br>
+</div>
+
+<pre><code><span id="TYPEenum"><span class="keyword">type</span> <code class="type"></code>enum</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenum.e_name">e_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >enum name</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTenum.e_values">e_values</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEenum_val">enum_val</a> list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the values of the enum</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+enumeration<br>
+</div>
+
+<pre><code><span id="TYPEarray_t"><span class="keyword">type</span> <code class="type"></code>array_t</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarray_t.ar_min">ar_min</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarray_t.ar_max">ar_max</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarray_t.ar_type">ar_type</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarray_t.ar_size">ar_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTarray_t.ar_align">ar_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+array type<br>
+</div>
+
+<pre><code><span id="TYPEst_field"><span class="keyword">type</span> <code class="type"></code>st_field</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_field.fld_name">fld_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >the type of the field</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_field.fld_type">fld_type</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a></code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >name of the field</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_field.fld_annot">fld_annot</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >annotation for the field</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+field of a structure<br>
+</div>
+
+<pre><code><span id="TYPEst_constructor"><span class="keyword">type</span> <code class="type">'a</code> st_constructor</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_constructor.c_name">c_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_constructor.c_args">c_args</span>&nbsp;:<code class="type">'a <a href="Repr_t.html#TYPEarg">arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+constructor<br>
+</div>
+
+<pre><code><span id="TYPEst_destructor"><span class="keyword">type</span> <code class="type"></code>st_destructor</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_destructor.d_name">d_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+destructor<br>
+</div>
+
+<pre><code><span id="TYPEst_method"><span class="keyword">type</span> <code class="type">'a</code> st_method</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_method.m_name">m_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_method.m_returns">m_returns</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_method.m_args">m_args</span>&nbsp;:<code class="type">'a <a href="Repr_t.html#TYPEarg">arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+method<br>
+</div>
+
+<pre><code><span id="TYPEst_operatormethod"><span class="keyword">type</span> <code class="type">'a</code> st_operatormethod</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_operatormethod.o_name">o_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_operatormethod.o_returns">o_returns</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_operatormethod.o_args">o_args</span>&nbsp;:<code class="type">'a <a href="Repr_t.html#TYPEarg">arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+operator-method<br>
+</div>
+
+<pre><code><span id="TYPEst_member"><span class="keyword">type</span> <code class="type">'a</code> st_member</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_member.Field"><span class="constructor">Field</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEst_field">st_field</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_member.Constructor"><span class="constructor">Constructor</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Repr_t.html#TYPEst_constructor">st_constructor</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_member.Destructor"><span class="constructor">Destructor</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEst_destructor">st_destructor</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_member.Method"><span class="constructor">Method</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Repr_t.html#TYPEst_method">st_method</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTst_member.OperatorMethod"><span class="constructor">OperatorMethod</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Repr_t.html#TYPEst_operatormethod">st_operatormethod</a></code></code></td>
+
+</tr></table>
+
+
+<pre><code><span id="TYPEc_struct"><span class="keyword">type</span> <code class="type">'a</code> c_struct</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTc_struct.st_name">st_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >structure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTc_struct.st_members">st_members</span>&nbsp;:<code class="type">'a <a href="Repr_t.html#TYPEst_member">st_member</a> list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >members of the structure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+structure<br>
+</div>
+
+<pre><code><span id="TYPEunion"><span class="keyword">type</span> <code class="type">'a</code> union</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTunion.u_name">u_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTunion.u_members">u_members</span>&nbsp;:<code class="type">'a <a href="Repr_t.html#TYPEst_member">st_member</a> list</code>;</code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >members of the structure</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+}
+
+<div class="info">
+union<br>
+</div>
+
+<pre><code><span id="TYPEtypedef"><span class="keyword">type</span> <code class="type"></code>typedef</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtypedef.td_name">td_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtypedef.td_type">td_type</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a> option</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+typedef<br>
+</div>
+
+<pre><code><span id="TYPEvariable"><span class="keyword">type</span> <code class="type"></code>variable</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.var_name">var_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTvariable.var_type">var_type</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+variable<br>
+</div>
+
+<pre><code><span id="TYPEqual"><span class="keyword">type</span> <code class="type"></code>qual</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTqual.Const"><span class="constructor">Const</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTqual.Volatile"><span class="constructor">Volatile</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTqual.Restrict"><span class="constructor">Restrict</span></span></code></td>
+
+</tr></table>
+
+<div class="info">
+qualification of a type<br>
+</div>
+
+<pre><code><span id="TYPEcvQual"><span class="keyword">type</span> <code class="type"></code>cvQual</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcvQual.cv_qual">cv_qual</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEqual">qual</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTcvQual.cv_type">cv_type</span>&nbsp;:<code class="type"><a href="Repr_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr></table>
+}
+
+
+<pre><code><span id="TYPEtype_kind"><span class="keyword">type</span> <code class="type">'a</code> type_kind</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.FundT"><span class="constructor">FundT</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >fundamental type (like int, float, etc)</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Enum"><span class="constructor">Enum</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEenum">enum</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.ArrayType"><span class="constructor">ArrayType</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEarray_t">array_t</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Struct"><span class="constructor">Struct</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Repr_t.html#TYPEc_struct">c_struct</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Typedef"><span class="constructor">Typedef</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEtypedef">typedef</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Union"><span class="constructor">Union</span></span> <span class="keyword">of</span> <code class="type">'a <a href="Repr_t.html#TYPEunion">union</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Class"><span class="constructor">Class</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >TODO</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.CvQual"><span class="constructor">CvQual</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEcvQual">cvQual</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Ptr"><span class="constructor">Ptr</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEid">id</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Variable"><span class="constructor">Variable</span></span> <span class="keyword">of</span> <code class="type"><a href="Repr_t.html#TYPEvariable">variable</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.Ellipsis"><span class="constructor">Ellipsis</span></span></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" ><code class="code">...</code> like in <code class="code">printf(const char *fmt, ...)</code></td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtype_kind.TODO"><span class="constructor">TODO</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+<td class="typefieldcomment" align="left" valign="top" ><code>(*</code></td><td class="typefieldcomment" align="left" valign="top" >stuff not handled yet</td><td class="typefieldcomment" align="left" valign="bottom" ><code>*)</code></td>
+</tr></table>
+
+
+</body></html>

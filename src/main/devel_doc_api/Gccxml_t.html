@@ -1,0 +1,900 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="XML_load.html">
+<link rel="next" href="Gccxml_cnt.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><title>Gccxml_t</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="XML_load.html" title="XML_load">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Gccxml_cnt.html" title="Gccxml_cnt">Next</a>
+</div>
+<h1>Module <a href="type_Gccxml_t.html">Gccxml_t</a></h1>
+<pre><span class="keyword">module</span> Gccxml_t: <code class="code">sig</code> <a href="Gccxml_t.html">..</a> <code class="code">end</code></pre><div class="info">
+Just the contents of the gccxml produced files<br>
+</div>
+<hr width="100%">
+<pre><span id="TYPEid"><span class="keyword">type</span> <code class="type"></code>id</span> = <code class="type">string</code> </pre>
+
+<pre><code><span id="TYPEgx_argument"><span class="keyword">type</span> <code class="type"></code>gx_argument</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_argument.gx_a_name">gx_a_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_argument.gx_a_type">gx_a_type</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_argument.gx_a_attributes">gx_a_attributes</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Argument</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_arg"><span class="keyword">type</span> <code class="type"></code>gx_arg</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arg.Arg"><span class="constructor">Arg</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_argument">gx_argument</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arg.Ellipsis"><span class="constructor">Ellipsis</span></span></code></td>
+
+</tr></table>
+
+
+<pre><code><span id="TYPEgx_func"><span class="keyword">type</span> <code class="type"></code>gx_func</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_func.gx_f_id">gx_f_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_func.gx_f_name">gx_f_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_func.gx_f_returns">gx_f_returns</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_func.gx_f_attributes">gx_f_attributes</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_func.gx_f_args">gx_f_args</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEgx_arg">gx_arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Function</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_enumvalue"><span class="keyword">type</span> <code class="type"></code>gx_enumvalue</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumvalue.gx_ev_name">gx_ev_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumvalue.gx_ev_init">gx_ev_init</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">EnumValue</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_enumeration"><span class="keyword">type</span> <code class="type"></code>gx_enumeration</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumeration.gx_e_id">gx_e_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumeration.gx_e_name">gx_e_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumeration.gx_e_context">gx_e_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumeration.gx_e_size">gx_e_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumeration.gx_e_align">gx_e_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_enumeration.gx_e_values">gx_e_values</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEgx_enumvalue">gx_enumvalue</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Enumeration</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_fundamentaltype"><span class="keyword">type</span> <code class="type"></code>gx_fundamentaltype</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_fundamentaltype.gx_ft_id">gx_ft_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_fundamentaltype.gx_ft_name">gx_ft_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_fundamentaltype.gx_ft_size">gx_ft_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_fundamentaltype.gx_ft_align">gx_ft_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">FundamentalType</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_arraytype"><span class="keyword">type</span> <code class="type"></code>gx_arraytype</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arraytype.gx_ar_id">gx_ar_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arraytype.gx_ar_min">gx_ar_min</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arraytype.gx_ar_max">gx_ar_max</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arraytype.gx_ar_type">gx_ar_type</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arraytype.gx_ar_size">gx_ar_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_arraytype.gx_ar_align">gx_ar_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">ArrayType</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_struct"><span class="keyword">type</span> <code class="type"></code>gx_struct</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_id">gx_s_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_name">gx_s_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_context">gx_s_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_access">gx_s_access</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_artificial">gx_s_artificial</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_size">gx_s_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_align">gx_s_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_members">gx_s_members</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_struct.gx_s_bases">gx_s_bases</span>&nbsp;:<code class="type">string list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Struct</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_field"><span class="keyword">type</span> <code class="type"></code>gx_field</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_id">gx_fld_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_name">gx_fld_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_type">gx_fld_type</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_access">gx_fld_access</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_offset">gx_fld_offset</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_context">gx_fld_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_field.gx_fld_attributes">gx_fld_attributes</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Field</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_method"><span class="keyword">type</span> <code class="type"></code>gx_method</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_id">gx_m_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_name">gx_m_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_returns">gx_m_returns</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_context">gx_m_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_access">gx_m_access</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_inline">gx_m_inline</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_method.gx_m_args">gx_m_args</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEgx_arg">gx_arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Method</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_operatormethod"><span class="keyword">type</span> <code class="type"></code>gx_operatormethod</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_operatormethod.gx_o_id">gx_o_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_operatormethod.gx_o_name">gx_o_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_operatormethod.gx_o_returns">gx_o_returns</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_operatormethod.gx_o_args">gx_o_args</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEgx_arg">gx_arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">OperatorMethod</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_constructor"><span class="keyword">type</span> <code class="type"></code>gx_constructor</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_constructor.gx_c_id">gx_c_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_constructor.gx_c_name">gx_c_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_constructor.gx_c_args">gx_c_args</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEgx_arg">gx_arg</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Constructor</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_destructor"><span class="keyword">type</span> <code class="type"></code>gx_destructor</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_destructor.gx_d_id">gx_d_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_destructor.gx_d_name">gx_d_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Destructor</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_union"><span class="keyword">type</span> <code class="type"></code>gx_union</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_id">gx_u_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_name">gx_u_name</span>&nbsp;:<code class="type">string option</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_context">gx_u_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_size">gx_u_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_align">gx_u_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_members">gx_u_members</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_union.gx_u_bases">gx_u_bases</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Union</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_cvqualifiedtype"><span class="keyword">type</span> <code class="type"></code>gx_cvqualifiedtype</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_cvqualifiedtype.gx_cv_id">gx_cv_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_cvqualifiedtype.gx_cv_type">gx_cv_type</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_cvqualifiedtype.gx_cv_qual">gx_cv_qual</span>&nbsp;:<code class="type">string list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">CvQualifiedType</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_typedef"><span class="keyword">type</span> <code class="type"></code>gx_typedef</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_typedef.gx_td_id">gx_td_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_typedef.gx_td_name">gx_td_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_typedef.gx_td_type">gx_td_type</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_typedef.gx_td_context">gx_td_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Typedef</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_variable"><span class="keyword">type</span> <code class="type"></code>gx_variable</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_variable.gx_v_id">gx_v_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_variable.gx_v_name">gx_v_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_variable.gx_v_type">gx_v_type</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_variable.gx_v_context">gx_v_context</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">Variable</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_referencetype"><span class="keyword">type</span> <code class="type"></code>gx_referencetype</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_referencetype.gx_r_id">gx_r_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_referencetype.gx_r_type">gx_r_type</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_referencetype.gx_r_size">gx_r_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_referencetype.gx_r_align">gx_r_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">ReferenceType</code><br>
+</div>
+
+<pre><code><span id="TYPEgx_pointertype"><span class="keyword">type</span> <code class="type"></code>gx_pointertype</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_pointertype.gx_p_id">gx_p_id</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_pointertype.gx_p_type">gx_p_type</span>&nbsp;:<code class="type"><a href="Gccxml_t.html#TYPEid">id</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_pointertype.gx_p_size">gx_p_size</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTgx_pointertype.gx_p_align">gx_p_align</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info">
+GccXml Tag <code class="code">PointerType</code><br>
+</div>
+
+<pre><code><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.FundamentalType"><span class="constructor">FundamentalType</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_fundamentaltype">gx_fundamentaltype</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Enumeration"><span class="constructor">Enumeration</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_enumeration">gx_enumeration</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.ArrayType"><span class="constructor">ArrayType</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_arraytype">gx_arraytype</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Function"><span class="constructor">Function</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_func">gx_func</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Struct"><span class="constructor">Struct</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_struct">gx_struct</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Field"><span class="constructor">Field</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_field">gx_field</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Constructor"><span class="constructor">Constructor</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_constructor">gx_constructor</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Destructor"><span class="constructor">Destructor</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_destructor">gx_destructor</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Method"><span class="constructor">Method</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_method">gx_method</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.OperatorMethod"><span class="constructor">OperatorMethod</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_operatormethod">gx_operatormethod</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Union"><span class="constructor">Union</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_union">gx_union</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Variable"><span class="constructor">Variable</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_variable">gx_variable</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.CvQualifiedType"><span class="constructor">CvQualifiedType</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_cvqualifiedtype">gx_cvqualifiedtype</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.Typedef"><span class="constructor">Typedef</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_typedef">gx_typedef</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.PointerType"><span class="constructor">PointerType</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_pointertype">gx_pointertype</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.ReferenceType"><span class="constructor">ReferenceType</span></span> <span class="keyword">of</span> <code class="type"><a href="Gccxml_t.html#TYPEgx_referencetype">gx_referencetype</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTt.TODO"><span class="constructor">TODO</span></span> <span class="keyword">of</span> <code class="type"><a href="XML_read.html#TYPEtree">XML_read.tree</a></code></code></td>
+
+</tr></table>
+
+<div class="info">
+Elements that can be found in the gccxml produced files<br>
+</div>
+
+</body></html>

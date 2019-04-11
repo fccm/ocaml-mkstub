@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DIRNAME="`dirname $0`"
+DIR="$DIRNAME/.."
+
+HXTR="$DIRNAME/hxtr"
+TD="$DIR/share/templates/fmt/xml"
+
+$HXTR \
+   -tp-f $TD/xml_func.tp \
+   -tp-e $TD/xml_enum.tp \
+   -tp-s $TD/xml_struct.tp \
+   $*

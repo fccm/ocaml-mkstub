@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<GCC_XML cvs_revision="1.128">
+  <Namespace id="_1" name="::" members="_3 _4 _5 _6 _7 _8 _9 _10 _11 _12 _13 _14 _15 _16 _17 _18 _19 _20 _21 _22 _23 _24 _25 _26 _27 _28 _29 _30 _31 _32 _33 _34 _35 _36 _37 _38 _39 _40 _41 _42 _43 _44 _45 _46 _47 _48 _49 _50 _51 _52 _53 _54 _55 _56 _58 _59 _60 _61 _62 _63 _64 _65 _66 _67 _68 _69 _70 _71 _72 _73 _74 _75 _76 _77 _78 _79 _80 _81 _82 _83 _84 _85 _86 _87 _88 _89 _90 _91 _2 _92 _93 _94 _95 _96 _97 _98 _99 _100 _101 _102 _103 _104 _105 _57 _106 _107 _108 _109 _110 _111 _112 _113 _114 _115 _116 _117 _118 _119 _120 _121 _122 _123 _124 _125 _126 _127 _128 _129 _130 _131 _132 _133 _134 _135 _136 _137 _138 " mangled="_Z2::" demangled="::"/>
+  <Namespace id="_2" name="std" context="_1" members="" mangled="_Z3std" demangled="std"/>
+  <Enumeration id="_57" name="e_third" context="_1" location="f1:18" file="f1" line="18" artificial="1" size="32" align="32">
+    <EnumValue name="KAPPA" init="0"/>
+    <EnumValue name="LAMBDA" init="1"/>
+    <EnumValue name="MU" init="2"/>
+    <EnumValue name="NU" init="3"/>
+    <EnumValue name="XI" init="4"/>
+    <EnumValue name="OMICRON" init="5"/>
+    <EnumValue name="PI" init="6"/>
+    <EnumValue name="RHO" init="7"/>
+    <EnumValue name="SIGMA" init="8"/>
+    <EnumValue name="TAU" init="9"/>
+    <EnumValue name="UPSILON" init="10"/>
+    <EnumValue name="PHI" init="11"/>
+    <EnumValue name="CHI" init="12"/>
+    <EnumValue name="PSI" init="13"/>
+    <EnumValue name="OMEGA" init="14"/>
+  </Enumeration>
+  <Typedef id="_58" name="e_third_t" type="_57" context="_1" location="f1:34" file="f1" line="34"/>
+  <Namespace id="_75" name="__cxxabiv1" context="_1" members="" mangled="_Z10__cxxabiv1" demangled="__cxxabiv1"/>
+  <Enumeration id="_92" name="e_second" context="_1" location="f1:16" file="f1" line="16" size="32" align="32">
+    <EnumValue name="EPSILON" init="0"/>
+    <EnumValue name="ZETA" init="1"/>
+    <EnumValue name="ETA" init="2"/>
+    <EnumValue name="THETA" init="4"/>
+    <EnumValue name="IOTA" init="8"/>
+  </Enumeration>
+  <Enumeration id="_100" name="e_first" context="_1" location="f1:1" file="f1" line="1" artificial="1" size="32" align="32">
+    <EnumValue name="ALPHA" init="0"/>
+    <EnumValue name="BETA" init="1"/>
+    <EnumValue name="GAMMA" init="2"/>
+    <EnumValue name="DELTA" init="3"/>
+  </Enumeration>
+  <FundamentalType id="_139" name="double" size="64" align="64"/>
+  <PointerType id="_140" type="_157c" size="32" align="32"/>
+  <FundamentalType id="_141" name="float" size="32" align="32"/>
+  <FundamentalType id="_142" name="long double" size="96" align="32"/>
+  <FundamentalType id="_143" name="bool" size="8" align="8"/>
+  <FundamentalType id="_144" name="int" size="32" align="32"/>
+  <FundamentalType id="_145" name="long long int" size="64" align="64"/>
+  <FundamentalType id="_146" name="complex float" size="64" align="32"/>
+  <FundamentalType id="_147" name="complex long double" size="192" align="32"/>
+  <FundamentalType id="_148" name="complex double" size="128" align="64"/>
+  <FundamentalType id="_149" name="void" align="8"/>
+  <PointerType id="_150" type="_149" size="32" align="32"/>
+  <PointerType id="_151" type="_149c" size="32" align="32"/>
+  <FundamentalType id="_152" name="unsigned int" size="32" align="32"/>
+  <PointerType id="_153" type="_144" size="32" align="32"/>
+  <FundamentalType id="_154" name="long int" size="32" align="32"/>
+  <PointerType id="_155" type="_141" size="32" align="32"/>
+  <PointerType id="_156" type="_142" size="32" align="32"/>
+  <FundamentalType id="_157" name="char" size="8" align="8"/>
+  <CvQualifiedType id="_157c" type="_157" const="1"/>
+  <CvQualifiedType id="_149c" type="_149" const="1"/>
+  <File id="f0" name="/usr/share/gccxml-0.9/GCC/4.3/gccxml_builtins.h"/>
+  <File id="f1" name="test_enum.h"/>
+</GCC_XML>

@@ -1,0 +1,55 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><title>Cmd_line</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;input_kind&nbsp;=&nbsp;<span class="constructor">XML_in</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">H_in</span>&nbsp;<span class="keyword">of</span>&nbsp;string&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">No_in</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;a&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in_file&nbsp;:&nbsp;<span class="constructor">Cmd_line</span>.input_kind;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;incdir&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;exclude&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;only&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;char_split&nbsp;:&nbsp;char;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rem_prefix&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;extern_cmd&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;failsafe&nbsp;:&nbsp;bool;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tag_chars&nbsp;:&nbsp;<span class="constructor">Stmpl</span>.cs;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instructions&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_f&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_e&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_s&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_u&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_o&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_w&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_f_vars&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_e_vars&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_s_vars&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_u_vars&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_o_vars&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;template_w_vars&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;parse_argv&nbsp;:&nbsp;string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Cmd_line</span>.a<br>
+<span class="keyword">end</span></code></body></html>

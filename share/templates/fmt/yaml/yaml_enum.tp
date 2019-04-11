@@ -1,0 +1,7 @@
+---
+Enum:
+  Enum_name: {(Enum_name)}
+  Enum_values:{<Enum_list:
+<{
+    - Ev_name: {(Enum_val_name)}
+      Ev_init: {(Enum_val_init)}}>Enum_list>}

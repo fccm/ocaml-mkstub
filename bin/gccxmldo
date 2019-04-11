@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DIR=`dirname $1`
+
+OUT=$1
+OUT=`basename $OUT .h`
+OUT=`basename $OUT .hpp`
+OUT=`basename $OUT .hxx`
+OUT="$DIR/$OUT.xml"
+
+gccxml $1 -fxml=$OUT

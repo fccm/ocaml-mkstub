@@ -1,0 +1,12 @@
+=== How to install ===
+
+You can make a standard install with the command:
+
+  $ make install
+
+
+To install in a non standard location, you can use the variables
+from the "make/Makefile.config" file, for example:
+
+  $ make install PREFIX=/usr/local
+

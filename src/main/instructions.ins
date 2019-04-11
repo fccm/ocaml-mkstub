@@ -1,0 +1,33 @@
+
+ENUM:theEnumName = wrap_as_poly_var
+ENUM:anotherEnum = wrap_as_variant
+ENUM:someEnum:enumVal = ignore
+
+STRUCT:stName = wrap_as_pointer
+STRUCT:stName = finalizer_is(some_other_func)
+STRUCT:someStc:someField = ignore
+
+FUNC:bazFunc = ignore
+FUNC:bazFunc = clear
+
+ARG:someFunc:arg3 = default_value_is(42)
+ARG:otherFunc:arg2 = is_bit_field
+ARG:fooFunc:arg0 = is_optional_c(NULL)
+ARG:fooFunc:arg1 = is_optional_ml(-1)
+ARG:barFunc:arg2 = dont_wrap_put(0)
+
+TYPE:someT = \
+   ml_conv(map_t_func); \
+   c_conv(conv_t_macro); \
+   ml_name(some_t)
+
+TEST:exFunc = args(2,3); return(5); label(tells)
+
+TEST:barFunc:ml = args(1,2); return(3)
+TEST:barFunc:C = args(1,2,0); return(3)
+
+TEST:barFunc = \
+   ml_args(1,2); \
+   c_args(1,2,0); \
+   return(3)
+

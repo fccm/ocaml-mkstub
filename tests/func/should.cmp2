@@ -1,0 +1,4 @@
+(fun f2 int ()
+  (param int "" ())
+)
+

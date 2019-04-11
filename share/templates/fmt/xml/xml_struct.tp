@@ -1,0 +1,9 @@
+<struct
+  st_name="{(Struct_name)}">
+{<Struct_fields<{  <field
+    fld_name="{(Field_name)}"
+    fld_type="{(Field_type)}">
+{<Field_annots<{    <annot>{(Annot)}</annot>
+}>Field_annots>}  </field>
+}>Struct_fields>}</struct>
+

@@ -1,0 +1,46 @@
+
+/* Conversions of enum: {(Enum_name)} */
+
+static const {(Enum_name)} ocaml_table_{(Enum_name)}[] = {
+{<Enum_list<{    {(Enum_val_name)},
+}>Enum_list>}};
+
+#define {(Enum_name)}_val_unsafe(v) \
+    (ocaml_table_{(Enum_name)}[Long_val(v)])
+
+{(Enum_name)} {(Enum_name)}_val_safe(v)
+{
+    switch (Long_val(v))
+    {
+{<Enum_list<{        case {(i)}: return {(Enum_val_name)};
+}>Enum_list>}
+        default: caml_failwith("{(Enum_name)}_val");
+    }
+    caml_failwith("{(Enum_name)}_val");
+}
+
+#if defined(USE_SAFE_STUB)
+
+#define conv_{(Enum_name)}_ml2c( ml_v, v ) \
+    ((*v) = {(Enum_name)}_val_safe(ml_v))
+
+#else
+
+#define conv_{(Enum_name)}_ml2c( ml_v, v ) \
+    ((*v) = {(Enum_name)}_val_unsafe(ml_v))
+
+#endif
+
+value
+Val_{(Enum_name)}({(Enum_name)} e)
+{
+    switch (e)
+    {
+{<Enum_list<{        case {(Enum_val_name)}:	return Val_long({(i)});
+}>Enum_list>}
+        default: caml_failwith("Val_{(Enum_name)}");
+    }
+    caml_failwith("Val_{(Enum_name)}");
+}
+
+

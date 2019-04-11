@@ -1,0 +1,42 @@
+#!/bin/sh
+
+DIRNAME="`dirname $0`"
+DIR="$DIRNAME/.."
+
+HXTR="$DIRNAME/hxtr"
+TP="$DIR/share/templates/ocaml"
+FLT="$DIR/src/filters"
+INC="$DIR/src/include"
+
+echo "(* GENERATED *)"  > generated.ml
+
+echo "module Ocaml_t_gen ="  >> generated.ml
+echo "struct"                >> generated.ml
+cat $INC/ocaml_t_gen.ml      >> generated.ml
+echo "end"                   >> generated.ml
+echo "open Ocaml_t_gen"      >> generated.ml
+
+$HXTR \
+  -tp-e $TP/ocaml_ml_enum.tp \
+  -tp-f $TP/ocaml_ml_func.tp \
+  -tp-s $TP/ocaml_ml_struct.tp \
+  -cmd $FLT/filter_ocaml_ml \
+  $* >> generated.ml
+
+echo " #> Written: 'generated.ml'"
+
+echo "/* GENERATED */"  >  generated_stub.c
+
+for inc in $INC/*caml_*.h
+do
+	inc="`basename $inc`"
+	echo "#include \"$inc\""  >> generated_stub.c
+done
+
+$HXTR \
+  -tp-e $TP/ocaml_c_stub_enum.tp \
+  -tp-f $TP/ocaml_c_stub_func.tp \
+  -tp-s $TP/ocaml_c_stub_struct.tp \
+  $* >> generated_stub.c
+
+echo " #> Written: 'generated_stub.c'"

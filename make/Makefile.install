@@ -1,0 +1,26 @@
+MAN_DEST := $(MANDIR)/man1
+DATA_DEST := $(DATADIR)/hxtr
+TMPL_DEST := $(DATA_DEST)/templates
+
+CP := cp -R
+COMPRESS := gzip
+
+.PHONY: install
+install: install_bin install_man install_data
+
+.PHONY: install_bin
+install_bin: hxtr
+	$(INSTALL_DIR) $(DESTDIR)$(BINDIR)
+	$(MAKE) -C hxtr hxtr
+	$(INSTALL_FILE) hxtr/hxtr $(DESTDIR)$(BINDIR)/
+
+.PHONY: install_man
+install_man:
+	$(INSTALL_DIR) $(DESTDIR)$(MAN_DEST)
+	$(INSTALL_FILE) man/hxtr.1 $(DESTDIR)$(MAN_DEST)/
+	$(COMPRESS)  $(DESTDIR)$(MAN_DEST)/hxtr.1
+
+.PHONY: install_data
+install_data:
+	$(INSTALL_DIR) $(DESTDIR)$(TMPL_DEST)
+	$(CP) templates/* $(DESTDIR)$(TMPL_DEST)/

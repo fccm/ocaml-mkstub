@@ -1,0 +1,5 @@
+Union_name: {(Union_name)}
+Union_members:
+{<Union_members<{  - Union_member: {(Mem_name)}	 {(Mem_type)}	 "{(Mem_annot)}"
+}>Union_members>}
+

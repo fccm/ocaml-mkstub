@@ -1,0 +1,4 @@
+<enum e_name="{(Enum_name)}">
+{<Enum_list<{  <enum i="{(i)}" ev_name="{(Enum_val_name)}" ev_init="{(Enum_val_init)}"/>
+}>Enum_list>}</enum>
+

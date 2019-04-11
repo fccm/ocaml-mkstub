@@ -1,0 +1,34 @@
+
+/* Wrap function: {(Fun_name)} */
+
+CAMLprim value
+ocaml_{(Fun_name)}({<Args:,:
+      value unit<{
+      value ml_p{(i)}_{(Param_name)}}>Args>} )
+{
+    CAMLparam{(Args_len)}({<Args:,<{
+       ml_p{(i)}_{(Param_name)}}>Args>} );
+
+    CAMLlocal1(ret);
+
+    R_DEC_{(Fun_return_type)}( res );
+
+    /* declarations */
+{<Args::    /* Empty */
+<{    P_DEC_{(Param_type)}( p{(i)}_{(Param_name)} );
+}>Args>}
+    /* convertions */
+{<Args::    /* Empty */
+<{    conv_{(Param_type)}_ml2c( ml_p{(i)}_{(Param_name)}, & p{(i)}_{(Param_name)} );
+}>Args>}
+    /* call */
+    RES_{(Fun_return_type)}( res )
+      {(Fun_name)}({<Args:, <{
+          p{(i)}_{(Param_name)}}>Args>} );
+
+    conv_{(Fun_return_type)}_c2ml( res, & ret );
+
+    CAMLreturn(ret);
+}
+
+

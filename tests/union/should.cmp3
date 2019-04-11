@@ -1,0 +1,11 @@
+(union "my_un3"
+  (members
+    (member "field_a" "int"
+      (annots "annot_A")
+    )
+    (member "field_b" "PTR_char"
+      (annots "annot_B2" "annot_B1")
+    )
+  )
+)
+

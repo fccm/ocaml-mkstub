@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Parse_in.html">
+<link rel="next" href="Print_parsed.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><link title="Tags Extractions" rel="Section" href="#3_TagsExtractions">
+<link title="Iterators on the associations of parameters" rel="Section" href="#3_Iteratorsontheassociationsofparameters">
+<link title="Debug" rel="Section" href="#3_Debug">
+<title>Stmpl</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Parse_in.html" title="Parse_in">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Print_parsed.html" title="Print_parsed">Next</a>
+</div>
+<h1>Module <a href="type_Stmpl.html">Stmpl</a></h1>
+<pre><span class="keyword">module</span> Stmpl: <code class="code">sig</code> <a href="Stmpl.html">..</a> <code class="code">end</code></pre><div class="info">
+Minimalist string template<br>
+</div>
+<hr width="100%">
+<pre><span id="TYPEassoc"><span class="keyword">type</span> <code class="type"></code>assoc</span> = <code class="type">string * string</code> </pre>
+
+<pre><code><span id="TYPEparam"><span class="keyword">type</span> <code class="type"></code>param</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTparam.VAR"><span class="constructor">VAR</span></span> <span class="keyword">of</span> <code class="type"><a href="Stmpl.html#TYPEassoc">assoc</a></code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTparam.LIST"><span class="constructor">LIST</span></span> <span class="keyword">of</span> <code class="type">(string * <a href="Stmpl.html#TYPEparam">param</a> list list)</code></code></td>
+
+</tr></table>
+
+
+<pre><span id="TYPEcs"><span class="keyword">type</span> <code class="type"></code>cs</span> </pre>
+
+<pre><span id="VALtag_chars"><span class="keyword">val</span> tag_chars</span> : <code class="type">?cs:<a href="Stmpl.html#TYPEcs">cs</a> -> ?var_chars:string -> ?rep_chars:string -> unit -> <a href="Stmpl.html#TYPEcs">cs</a></code></pre><pre><span id="VALstr"><span class="keyword">val</span> str</span> : <code class="type">?cs:<a href="Stmpl.html#TYPEcs">cs</a> -> string -> <a href="Stmpl.html#TYPEparam">param</a> list -> string</code></pre><pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">?cs:<a href="Stmpl.html#TYPEcs">cs</a> -> string -> <a href="Stmpl.html#TYPEparam">param</a> list -> unit</code></pre><br>
+A simple example:
+<pre class="codepre"><code class="code">let () =
+  let tmpl = "Hello {(Name)}, how are you?\n" in
+  print tmpl [
+    ("Name", "John");
+  ]
+</code></pre>
+<p>
+
+  output:
+  <pre class="codepre"><code class="code">"Hello John, how are you?"</code></pre>
+<p>
+
+  Second example, how to produce lists:
+<pre class="codepre"><code class="code">let () =
+  let tmpl = "
+  {(List_name)}:\
+  {&lt;List_repeat&lt;{
+  ==&gt; {(Something)}\
+  }&gt;List_repeat&gt;}
+" in
+  print tmpl [
+    VAR ("List_name", "dummy list");
+    LIST ("List_repeat",
+      [
+        [ ("Something", "foo") ];
+        [ ("Something", "bar") ];
+        [ ("Something", "baz") ];
+        [ ("Something", "qux") ];
+      ]
+    );
+  ]
+</code></pre>
+<p>
+
+  output: <pre class="codepre"><code class="code">"
+  dummy list:
+  ==&gt; foo
+  ==&gt; bar
+  ==&gt; baz
+  ==&gt; qux
+"</code></pre>
+<p>
+
+  Another example, joining items with a string:
+<pre class="codepre"><code class="code">let () =
+  let tmpl = "\
+  {&lt;Items_list:JOIN&lt;{  {(Item)}  }&gt;Items_list&gt;}
+" in
+  print tmpl [
+    LIST ("Items_list",
+      [
+        [ ("Item", "foo") ];
+        [ ("Item", "bar") ];
+        [ ("Item", "baz") ];
+        [ ("Item", "qux") ];
+      ]
+    );
+  ]
+</code></pre>
+<p>
+
+  output: <pre class="codepre"><code class="code">"  foo  JOIN  bar  JOIN  baz  JOIN  qux  "
+</code></pre>
+<p>
+
+  We can also provide an alternative element in case the list is empty:
+<pre class="codepre"><code class="code">let () =
+  let tmpl = "\
+  {&lt;Items_list:JOIN:EMPTY&lt;{  {(Item)}  }&gt;Items_list&gt;}
+" in
+  print tmpl [
+    LIST ("Items_list", []);
+  ]
+</code></pre>
+<p>
+
+  output: <pre class="codepre"><code class="code">"EMPTY"</code></pre>
+<p>
+
+  By default var tags are identified like <code class="code">{(Tag)}</code>
+  but if you would prefer to have <code class="code">@[Tag]@</code>
+  then use the parameter <code class="code">~var_chars:"@[]@"</code>.
+<p>
+
+  To customise repeat tags, use <code class="code">~rep_chars</code>
+  (its default is <code class="code">"{&lt;:&lt;{}&gt;&gt;}"</code>).
+<p>
+
+  With <code class="code">~rep_chars:"[@$[@]@]@"</code> the template will be:
+<pre class="codepre"><code class="code">  [@Repeat$Join$Empty[@
+  ]@Repeat]@
+</code></pre><br>
+<br>
+<h3 id="3_TagsExtractions">Tags Extractions</h3><br>
+<pre><span id="VALlist_vars"><span class="keyword">val</span> list_vars</span> : <code class="type">?cs:<a href="Stmpl.html#TYPEcs">cs</a> -> string -> string list</code></pre><div class="info">
+tells which vars are available in a template<br>
+</div>
+<pre><span id="VALlist_repeats"><span class="keyword">val</span> list_repeats</span> : <code class="type">?cs:<a href="Stmpl.html#TYPEcs">cs</a> -> string -> string list</code></pre><div class="info">
+tells which repeat tags are available in a template<br>
+</div>
+<pre><span id="VALlist_tags"><span class="keyword">val</span> list_tags</span> : <code class="type">?cs:<a href="Stmpl.html#TYPEcs">cs</a> -> string -> string list</code></pre><div class="info">
+tells which tags (vars and repeat) are available in a template<br>
+</div>
+<br>
+<h3 id="3_Iteratorsontheassociationsofparameters">Iterators on the associations of parameters</h3><br>
+<pre><span id="VALparams_iter_assoc"><span class="keyword">val</span> params_iter_assoc</span> : <code class="type">(<a href="Stmpl.html#TYPEassoc">assoc</a> -> unit) -> <a href="Stmpl.html#TYPEparam">param</a> list -> unit</code></pre><div class="info">
+iter the assocs from both the vars and the repeat lists<br>
+</div>
+<pre><span id="VALparams_map_assoc"><span class="keyword">val</span> params_map_assoc</span> : <code class="type">(<a href="Stmpl.html#TYPEassoc">assoc</a> -> <a href="Stmpl.html#TYPEassoc">assoc</a>) -> <a href="Stmpl.html#TYPEparam">param</a> list -> <a href="Stmpl.html#TYPEparam">param</a> list</code></pre><div class="info">
+map the assocs from both the vars and the repeat lists<br>
+</div>
+<pre><span id="VALparams_fold_assoc"><span class="keyword">val</span> params_fold_assoc</span> : <code class="type">(<a href="Stmpl.html#TYPEassoc">assoc</a> -> <a href="Stmpl.html#TYPEassoc">assoc</a> list) -> <a href="Stmpl.html#TYPEparam">param</a> list -> <a href="Stmpl.html#TYPEparam">param</a> list</code></pre><div class="info">
+simili-fold the assocs from both the vars and the repeat lists
+<p>
+
+    If the returned list is empty the input assoc is removed.
+    If several assocs are returned they are all added.<br>
+</div>
+<br>
+<h3 id="3_Debug">Debug</h3><br>
+<pre><span id="VALprint_params"><span class="keyword">val</span> print_params</span> : <code class="type">?oc:Pervasives.out_channel -> <a href="Stmpl.html#TYPEparam">param</a> list -> unit</code></pre><div class="info">
+just a debug function<br>
+</div>
+</body></html>

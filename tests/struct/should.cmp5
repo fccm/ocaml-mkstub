@@ -1,0 +1,6 @@
+(struct struct_fourth
+  (field int field_a4 ("annot_A"))
+  (field int field_b4 ("annot_B"))
+  (field int field_c4 ("annot_C2" "annot_C1"))
+)
+

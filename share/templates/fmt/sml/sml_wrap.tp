@@ -1,0 +1,89 @@
+(function
+  (func_name     "{(Func_name)}")
+  (func_res_type "{(Func_return_type)}")
+  (func_hint     "{(Func_hint)}")
+  (func_arguments
+    (args_c_call
+{<Args_C<{\
+      (arg (type "{(Arg_type)}") (name "{(Arg_name)}") (hint "{(Arg_hint)}"))
+}>Args_C>}    )
+
+    (args_wrapped
+{<Args_wrap<{\
+      (arg (type "{(Arg_type)}") (name "{(Arg_name)}") (hint "{(Arg_hint)}"))
+}>Args_wrap>}    )
+
+    (args_status
+{<Args_status<{\
+      (status (type "{(Status_type)}") (name "{(Status_name)}") (hint "{(Status_hint)}"))
+}>Args_status>}    )
+
+    (args_result
+{<Args_result<{\
+      (res (type "{(Res_type)}") (name "{(Res_name)}") (hint "{(Res_hint)}"))
+}>Args_result>}    )
+
+    (args_len
+{<Args_len<{\
+      (arg_len
+        (arg_len (type "{(Arg_len_type)}") (name "{(Arg_len_name)}") (hint "{(Arg_len_hint)}"))
+        (arg_about (type "{(Arg_type)}") (name "{(Arg_name)}") (hint "{(Arg_hint)}"))
+      )
+}>Args_len>}    )
+  )
+  (func_result
+    ; Empty if return void
+    (return\
+{<Return::
+    <{\
+ (type "{(Func_return_type)}")\
+ (name "{(Func_return_name)}")\
+ (hint "{(Func_return_hint)}") \
+}>Return>})
+
+    ; All results
+    (results
+{<Results<{\
+      (res (type "{(Res_type)}") (name "{(Res_name)}") (hint "{(Res_hint)}"))
+}>Results>}    )
+
+    ; If zero result
+    (zero_result\
+{<Zero_result:: "false"<{ "true"\
+}>Zero_result>})
+
+    ; If exactly one result
+    (one_result\
+{<One_result<{ (type "{(Res_type)}") (name "{(Res_name)}") (hint "{(Res_hint)}") \
+}>One_result>})
+
+    ; If only 1 result and this result comes from an argument
+    (one_result_arg\
+{<One_result_arg<{ (type "{(Res_type)}") (name "{(Res_name)}") (hint "{(Res_hint)}") \
+}>One_result_arg>})
+
+    ; If only 1 result and this result is from the return of the function call
+    (one_result_return\
+{<One_result_return<{ (type "{(Res_type)}") (name "{(Res_name)}") (hint "{(Res_hint)}") \
+}>One_result_return>})
+
+    ; If 2 or more results
+    (multi_results\
+{<Multi_results:before<{ "same than (results)"\
+{<Multi_results<{\
+}>Multi_results>})
+
+    ; If 2 or more results and these results come from pointer arguments
+    (multi_results_arg\
+{<Multi_results_arg:before<{ "same than (results)"\
+{<Multi_results_arg<{\
+}>Multi_results_arg>})
+
+    ; If 2 or more results and these results include the function return
+    (multi_results_return\
+{<Multi_results_return:before<{ "same than (results)"\
+{<Multi_results_return<{\
+}>Multi_results_return>})
+  )
+)
+

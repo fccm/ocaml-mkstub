@@ -1,0 +1,14 @@
+(union "my_un1"
+  (members
+    (member "b" "ARR_char"
+      (annots )
+    )
+    (member "s" "ARR_short int"
+      (annots )
+    )
+    (member "l" "ARR_long int"
+      (annots )
+    )
+  )
+)
+

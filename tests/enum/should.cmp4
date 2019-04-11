@@ -1,0 +1,18 @@
+(enum e_third_t
+  (e_val 0 KAPPA)
+  (e_val 1 LAMBDA)
+  (e_val 2 MU)
+  (e_val 3 NU)
+  (e_val 4 XI)
+  (e_val 5 OMICRON)
+  (e_val 6 PI)
+  (e_val 7 RHO)
+  (e_val 8 SIGMA)
+  (e_val 9 TAU)
+  (e_val 10 UPSILON)
+  (e_val 11 PHI)
+  (e_val 12 CHI)
+  (e_val 13 PSI)
+  (e_val 14 OMEGA)
+)
+

@@ -1,0 +1,4 @@
+type {(Struct_name)} = {
+{<Struct_fields<{  {(Field_name)}: {(Field_type)};
+}>Struct_fields>}}
+

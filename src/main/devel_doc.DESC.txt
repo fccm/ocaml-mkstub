@@ -1,0 +1,92 @@
++ ---- + ---- + ---- + ---- + ---- + ---- + ---- + ---- +
+
+======## Summary
+
+:#  Starting point in XML_read:
+
+    type tree =
+      | E of tag * tree list
+      | D of string
+
+:#  Convert it to high level repr in Parse_in:
+
+      full_type list
+      func list
+
+:#  Then print it in Print_parsed.
+
+
++ ---- + ---- + ---- + ---- + ---- + ---- + ---- + ---- +
+
+======## Source Files Desc
+
+
+====% utils.ml
+
+  Only basic utils functions.
+
+====% cmd_line.ml
+
+  Just parses the command line arguments.
+
+====% XML_read.ml
+
+  Reads the input channel or string that should contain XML from gccxml.
+  Converts this input in a tree data structure.
+
+====% XML_load.ml
+
+  Reads what the user provided as input.
+  Possibly pipes this input through gccxml for a header .h
+  Then sends this to XML_read.
+
+====% gccxml_t.mli
+
+  Very close representation of the gccxml output.
+
+====% gccxml_cnt.ml
+
+  Converts the XML tree into Gccxml_t.t
+
+====% repr_t.mli
+
+  High-level representation of the contents of a C header file.
+
+====% parse_in.ml
+
+  Converts gccxml representation into high-level representation.
+  Also reads the gccxml annotations.
+
+  val f: Gccxml_t.t -> Repr_t.t
+
+====% print_parsed.ml
+
+  Prints the high-level representation with templates.
+  Possibly call the -cmd command, if _cmd tags are found in the template.
+
+====% main.ml
+
+  Read user command line arg with:  Cmd_line.
+  Reads the input with:  XML_load.
+  Convert the XML input higher level:  Parse_in.
+  Prints the high repr:  Print_parsed.
+
++ ---- + ---- + ---- + ---- + ---- + ---- + ---- + ---- +
+
+======## API Doc of the Sources
+
+  Use this command to generate the ocamldoc api:
+
+    make devel_doc_api
+
+
++ ---- + ---- + ---- + ---- + ---- + ---- + ---- + ---- +
+
+==. hrepr_t.mli
+==. instructions_t.mli
+==. parse_instr.ml
+==. conv.ml
+==. print_hr.ml
+
++ ---- + ---- + ---- + ---- + ---- + ---- + ---- + ---- +
+

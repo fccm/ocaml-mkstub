@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<GCC_XML cvs_revision="1.128">
+  <Namespace id="_1" name="::" members="_3 _4 _2 _5 _6 _7 " mangled="_Z2::" demangled="::"/>
+  <Namespace id="_2" name="std" context="_1" members="" mangled="_Z3std" demangled="std"/>
+  <Union id="_3" name="my_un3" context="_1" mangled="6my_un3" demangled="my_un3" location="f0:31" file="f0" line="31" size="32" align="32" members="_8 _9 _10 _11 _12 _13 " bases=""/>
+  <Namespace id="_4" name="__cxxabiv1" context="_1" members="" mangled="_Z10__cxxabiv1" demangled="__cxxabiv1"/>
+  <Union id="_5" context="_1" mangled="3._0" demangled="._0" location="f0:1" file="f0" line="1" artificial="1" size="160" align="32" members="_14 _15 _16 _17 _18 _19 _20 " bases=""/>
+  <Union id="_6" name="my_un2" context="_1" mangled="6my_un2" demangled="my_un2" location="f0:11" file="f0" line="11" size="128" align="32" members="_21 _22 _23 _24 _25 _26 " bases=""/>
+  <Variable id="_7" name="my_un1" type="_5" context="_1" location="f0:5" file="f0" line="5"/>
+  <Field id="_8" name="field_a" type="_27" offset="0" context="_3" access="public" location="f0:29" file="f0" line="29" attributes="gccxml(annot_A)"/>
+  <Field id="_9" name="field_b" type="_28" offset="0" context="_3" access="public" location="f0:30" file="f0" line="30" attributes="gccxml(annot_B2) gccxml(annot_B1)"/>
+  <Destructor id="_10" name="._2" artificial="1" throw="" context="_3" access="public" mangled="_ZN6my_un3D1Ev *INTERNAL* " demangled="my_un3::~my_un3()" location="f0:31" file="f0" line="31" endline="31" inline="1">
+  </Destructor>
+  <OperatorMethod id="_11" name="=" returns="_29" artificial="1" throw="" context="_3" access="public" mangled="_ZN6my_un3aSERKS_" demangled="my_un3::operator=(my_un3 const&amp;)" location="f0:31" file="f0" line="31" endline="31" inline="1">
+    <Argument type="_30" location="f0:28" file="f0" line="28"/>
+  </OperatorMethod>
+  <Constructor id="_12" name="._2" artificial="1" throw="" context="_3" access="public" mangled="_ZN6my_un3C1ERKS_ *INTERNAL* " demangled="my_un3::my_un3(my_un3 const&amp;)" location="f0:31" file="f0" line="31" endline="31" inline="1">
+    <Argument type="_30" location="f0:28" file="f0" line="28"/>
+  </Constructor>
+  <Constructor id="_13" name="._2" artificial="1" throw="" context="_3" access="public" mangled="_ZN6my_un3C1Ev *INTERNAL* " demangled="my_un3::my_un3()" location="f0:31" file="f0" line="31" inline="1"/>
+  <Field id="_14" name="b" type="_31" offset="0" context="_5" access="public" location="f0:2" file="f0" line="2"/>
+  <Field id="_15" name="s" type="_32" offset="0" context="_5" access="public" location="f0:3" file="f0" line="3"/>
+  <Field id="_16" name="l" type="_33" offset="0" context="_5" access="public" location="f0:4" file="f0" line="4"/>
+  <Destructor id="_17" name="._0" artificial="1" throw="" context="_5" access="public" mangled="_ZN3._0D1Ev *INTERNAL* " demangled="._0::~._0()" location="f0:1" file="f0" line="1" endline="1" inline="1">
+  </Destructor>
+  <OperatorMethod id="_18" name="=" returns="_34" artificial="1" throw="" context="_5" access="public" mangled="_ZN3._0aSERKS_" demangled="._0::operator=(._0 const&amp;)" location="f0:1" file="f0" line="1" endline="1" inline="1">
+    <Argument type="_35" location="f0:1" file="f0" line="1"/>
+  </OperatorMethod>
+  <Constructor id="_19" artificial="1" throw="" context="_5" access="public" mangled="_ZN3._0C1ERKS_ *INTERNAL* " demangled="._0::._0(._0 const&amp;)" location="f0:1" file="f0" line="1" endline="1" inline="1">
+    <Argument type="_35" location="f0:1" file="f0" line="1"/>
+  </Constructor>
+  <Constructor id="_20" artificial="1" throw="" context="_5" access="public" mangled="_ZN3._0C1Ev *INTERNAL* " demangled="._0::._0()" location="f0:1" file="f0" line="1" inline="1"/>
+  <Field id="_21" name="size" type="_36" offset="0" context="_6" access="public" location="f0:9" file="f0" line="9"/>
+  <Field id="_22" name="align" type="_37" offset="0" context="_6" access="public" location="f0:10" file="f0" line="10"/>
+  <Destructor id="_23" name="._1" artificial="1" throw="" context="_6" access="public" mangled="_ZN6my_un2D1Ev *INTERNAL* " demangled="my_un2::~my_un2()" location="f0:11" file="f0" line="11" endline="11" inline="1">
+  </Destructor>
+  <OperatorMethod id="_24" name="=" returns="_38" artificial="1" throw="" context="_6" access="public" mangled="_ZN6my_un2aSERKS_" demangled="my_un2::operator=(my_un2 const&amp;)" location="f0:11" file="f0" line="11" endline="11" inline="1">
+    <Argument type="_39" location="f0:8" file="f0" line="8"/>
+  </OperatorMethod>
+  <Constructor id="_25" name="._1" artificial="1" throw="" context="_6" access="public" mangled="_ZN6my_un2C1ERKS_ *INTERNAL* " demangled="my_un2::my_un2(my_un2 const&amp;)" location="f0:11" file="f0" line="11" endline="11" inline="1">
+    <Argument type="_39" location="f0:8" file="f0" line="8"/>
+  </Constructor>
+  <Constructor id="_26" name="._1" artificial="1" throw="" context="_6" access="public" mangled="_ZN6my_un2C1Ev *INTERNAL* " demangled="my_un2::my_un2()" location="f0:11" file="f0" line="11" inline="1"/>
+  <FundamentalType id="_27" name="int" size="32" align="32"/>
+  <PointerType id="_28" type="_40" size="32" align="32"/>
+  <ReferenceType id="_29" type="_3" size="32" align="32"/>
+  <ReferenceType id="_30" type="_3c" size="32" align="32"/>
+  <ArrayType id="_31" min="0" max="19u" type="_40" size="160" align="8"/>
+  <ArrayType id="_32" min="0" max="9u" type="_42" size="160" align="16"/>
+  <ArrayType id="_33" min="0" max="4u" type="_37" size="160" align="32"/>
+  <ReferenceType id="_34" type="_5" size="32" align="32"/>
+  <ReferenceType id="_35" type="_5c" size="32" align="32"/>
+  <ArrayType id="_36" min="0" max="15u" type="_40" size="128" align="8"/>
+  <FundamentalType id="_37" name="long int" size="32" align="32"/>
+  <ReferenceType id="_38" type="_6" size="32" align="32"/>
+  <ReferenceType id="_39" type="_6c" size="32" align="32"/>
+  <FundamentalType id="_40" name="char" size="8" align="8"/>
+  <FundamentalType id="_42" name="short int" size="16" align="16"/>
+  <CvQualifiedType id="_5c" type="_5" const="1"/>
+  <CvQualifiedType id="_6c" type="_6" const="1"/>
+  <CvQualifiedType id="_3c" type="_3" const="1"/>
+  <File id="f0" name="test_union.h"/>
+</GCC_XML>

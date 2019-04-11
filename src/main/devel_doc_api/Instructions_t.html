@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Hxtr.html">
+<link rel="next" href="Parse_instr.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><title>Instructions_t</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Hxtr.html" title="Hxtr">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Parse_instr.html" title="Parse_instr">Next</a>
+</div>
+<h1>Module <a href="type_Instructions_t.html">Instructions_t</a></h1>
+<pre><span class="keyword">module</span> Instructions_t: <code class="code">sig</code> <a href="Instructions_t.html">..</a> <code class="code">end</code></pre><div class="info">
+Instructions<br>
+</div>
+<hr width="100%">
+<br>
+Basically an instruction is like:
+  <code class="code">Target = Operations</code>
+<p>
+
+More precisely an instruction has the form:
+<p>
+
+  <code class="code">REFTAG:element_name = do_something()</code>
+  <code class="code">REFTAG:parent_name:element_name = do_something(); do_something_else()</code>
+<p>
+
+REFTAG indicates the kind of element this instruction refers to.
+<p>
+
+Existing REFTAG's are:<ul>
+<li>STRUCT: give instructions for wrapping a C struct</li>
+<li>ENUM: give instructions for wrapping a C enum</li>
+<li>FUNC: give instructions for wrapping a function</li>
+<li>ARG: give instructions for an argument of a function</li>
+<li>TYPE: give instructions for translating a given type</li>
+<li>TEST: make some unit tests on the resulting bindings</li>
+</ul>
+
+A target may contain zero, one or more instructions
+(separated with ';').
+<p>
+
+Examples: <pre class="codepre"><code class="code">ENUM:theEnumName = wrap_as_poly_var
+ENUM:anotherEnum = wrap_as_variant
+ENUM:someEnum:enumVal = ignore
+
+STRUCT:stName = wrap_as_pointer
+STRUCT:stName = finalizer_is(some_other_func)
+STRUCT:someStc:someField = ignore
+
+FUNC:bazFunc = ignore
+FUNC:bazFunc = clear
+
+ARG:someFunc:arg3 = default_value_is(42)
+ARG:otherFunc:arg2 = is_bit_field
+ARG:fooFunc:arg0 = is_optional_c(NULL)
+ARG:fooFunc:arg1 = is_optional_ml(-1)
+ARG:barFunc:arg2 = dont_wrap_put(0)
+
+TYPE:someT = \
+   ml_conv(map_t_func); \
+   c_conv(conv_t_macro); \
+   ml_name(some_t)
+
+TEST:exFunc = args(2,3); return(5); label(tells)
+
+TEST:barFunc:W = args(1,2); return(3)
+TEST:barFunc:C = args(1,2,0); return(3)
+
+TEST:barFunc = \
+   w_args(1,2); \
+   c_args(1,2,0); \
+   return(3)
+</code></pre><br>
+<pre><code><span id="TYPEtarget"><span class="keyword">type</span> <code class="type"></code>target</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.ENUM_name"><span class="constructor">ENUM_name</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.ENUM_val"><span class="constructor">ENUM_val</span></span> <span class="keyword">of</span> <code class="type">(string * string)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.STRUCT_name"><span class="constructor">STRUCT_name</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.STRUCT_field"><span class="constructor">STRUCT_field</span></span> <span class="keyword">of</span> <code class="type">(string * string)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.FUNC"><span class="constructor">FUNC</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.ARG"><span class="constructor">ARG</span></span> <span class="keyword">of</span> <code class="type">(string * string)</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.TYPE"><span class="constructor">TYPE</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTtarget.TEST"><span class="constructor">TEST</span></span> <span class="keyword">of</span> <code class="type">(string * string)</code></code></td>
+
+</tr></table>
+
+
+<pre><code><span id="TYPEoperation"><span class="keyword">type</span> <code class="type"></code>operation</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToperation.op_name">op_name</span>&nbsp;:<code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELToperation.op_args">op_args</span>&nbsp;:<code class="type">string list</code>;</code></td>
+
+</tr></table>
+}
+
+
+<pre><span id="TYPEinstruction"><span class="keyword">type</span> <code class="type"></code>instruction</span> = <code class="type"><a href="Instructions_t.html#TYPEtarget">target</a> * <a href="Instructions_t.html#TYPEoperation">operation</a> list</code> </pre>
+
+</body></html>

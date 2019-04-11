@@ -1,0 +1,33 @@
+OCAML := ocaml
+OCAMLC := ocamlc -g
+OCAMLOPT := ocamlopt -g
+OCAMLDOC := ocamldoc
+OCAMLDEP := ocamldep
+OCAMLMKLIB := ocamlmklib
+
+OCAML_DIR := $(shell ocamlc -where)
+
+CC_WALL := -Wall -Werror
+ML_WALL := -w A -warn-error A -ccopt "$(CC_WALL)"
+OCAMLOPT_WALL := $(OCAMLOPT) $(ML_WALL)
+
+.SECONDARY:
+
+%.cmi: %.mli
+	$(OCAMLC) -c -o $@ $<
+
+%.cmo: %.ml %.cmi
+	$(OCAMLC) -c $<
+%.cmo: %.ml
+	$(OCAMLC) -c $<
+
+%.cmx: %.ml %.cmi
+	$(OCAMLOPT) -c $<
+%.cmx: %.ml
+	$(OCAMLOPT) -c $<
+
+%.cma: %.cmi %.cmo
+	$(OCAMLC) -a -o $@ $(lastword $^)
+
+%.cmxa: %.cmi %.cmx
+	$(OCAMLOPT) -a -o $@ $(lastword $^)

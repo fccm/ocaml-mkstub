@@ -1,0 +1,5 @@
+(fun f8 int ("annot_ret")
+  (param int "p1" ("annot_p1"))
+  (param int "p2" ("annot_p2_b" "annot_p2_a"))
+)
+

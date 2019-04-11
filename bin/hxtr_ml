@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DIRNAME="`dirname $0`"
+DIR="$DIRNAME/.."
+
+HXTR="$DIRNAME/hxtr"
+TD="$DIR/share/templates/fmt/ml"
+
+$HXTR \
+   -tp-f $TD/ml_func.tp \
+   -tp-e $TD/ml_enum.tp \
+   -tp-s $TD/ml_struct.tp \
+   $*

@@ -1,0 +1,41 @@
+(function "{(Func_name)}" "{(Func_return_type)}" "{(Func_hint)}"
+
+  (args_c_call
+{<Args_C<{    (arg "{(Arg_type)}" "{(Arg_name)}" "{(Arg_hint)}")
+}>Args_C>}  )
+
+  (wrapped_args
+{<Args_wrap<{    (arg "{(Arg_type)}" "{(Arg_name)}" "{(Arg_hint)}")
+}>Args_wrap>}  )
+
+  (status
+{<Args_status<{    (status "{(Status_type)}" "{(Status_name)}" "{(Status_hint)}")
+}>Args_status>}  )
+
+  (args_ptr_out
+{<Args_result<{    (arg "{(Res_type)}" "{(Res_name)}")
+}>Args_result>}  )
+
+  (arrays_lengths
+{<Args_len<{    (len
+      (arg_len "{(Arg_len_type)}" "{(Arg_len_name)}" "{(Arg_len_hint)}")
+      (len_of "{(Arg_type)}" "{(Arg_name)}" "{(Arg_hint)}")
+    )
+}>Args_len>}  )
+
+  (empty_if_return_void
+{<Return<{    "{(Func_return_type)}" "{(Func_return_name)}" "{(Func_return_hint)}"
+}>Return>}  )
+
+  (results_all
+{<Results<{    (arg "{(Res_type)}" "{(Res_name)}")
+}>Results>}  )
+
+  (if_exactly_one_result
+{<One_result<{    (res "{(Res_type)}" "{(Res_name)}")
+}>One_result>}  )
+
+  (if_zero_result
+{<Zero_result<{    "ZERO_RESULT"
+}>Zero_result>}  )
+)

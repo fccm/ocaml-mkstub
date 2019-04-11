@@ -1,0 +1,7 @@
+(enum e_first
+  (e_val 0 ALPHA)
+  (e_val 1 BETA)
+  (e_val 2 GAMMA)
+  (e_val 3 DELTA)
+)
+

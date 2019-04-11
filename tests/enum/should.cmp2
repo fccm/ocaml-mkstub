@@ -1,0 +1,8 @@
+(enum e_second
+  (e_val 0 EPSILON)
+  (e_val 1 ZETA)
+  (e_val 2 ETA)
+  (e_val 4 THETA)
+  (e_val 8 IOTA)
+)
+

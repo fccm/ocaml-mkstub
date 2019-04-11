@@ -1,0 +1,8 @@
+(union "{(Union_name)}"
+  (members
+{<Union_members<{    (member "{(Mem_name)}" "{(Mem_type)}"
+      (annots {<Mem_annots: <{"{(Annot)}"}>Mem_annots>})
+    )
+}>Union_members>}  )
+)
+

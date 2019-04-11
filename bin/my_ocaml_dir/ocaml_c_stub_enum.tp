@@ -1,0 +1,20 @@
+
+static const {(Enum_name)} ocaml_table_{(Enum_name)}[] = {
+{<Enum_list<{    {(Enum_val_name)},
+}>Enum_list>}};
+
+#define {(Enum_name)}_val(v) \
+    (ocaml_table_{(Enum_name)}[Long_val(v)])
+
+value
+Val_{(Enum_name)}({(Enum_name)} e)
+{
+    switch (e)
+    {
+{<Enum_list<{        case {(Enum_val_name)}:	return Val_long({(i)});
+}>Enum_list>}
+        default: caml_failwith("Val_{(Enum_name)}");
+    }
+    caml_failwith("Val_{(Enum_name)}");
+}
+

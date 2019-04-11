@@ -1,0 +1,4 @@
+type {(Enum_name)} =
+{<Enum_list<{  | {(Enum_val_name)}	(* [{(i)}] = {(Enum_val_init)} *)
+}>Enum_list>}
+

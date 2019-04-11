@@ -1,0 +1,13 @@
+(function
+  (fun_name     "{(Fun_name)}")
+  (fun_res_type "{(Fun_return_type)}")
+  (fun_annot    ({<Fun_annots: <{"{(Annot)}"}>Fun_annots>}))
+  (args
+{<Args<{    (param
+      (param_type  "{(Param_type)}")
+      (param_name  "{(Param_name)}")
+      (param_annot ({<Param_annots: <{"{(Annot)}"}>Param_annots>}))
+    )
+}>Args>}  )
+)
+

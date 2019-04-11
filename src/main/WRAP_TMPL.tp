@@ -1,0 +1,54 @@
+Function:
+  {(Func_name)}
+  {(Func_return_type)}
+  {(Func_hint)}
+
+  // Lengths of arrays
+{<Args_len<{
+      {(Arg_len_type)}  // probably int, unsigned int or size_t
+      {(Arg_len_name)}
+      {(Arg_len_hint)}
+      {(Arg_type)}
+      {(Arg_name)}
+      {(Arg_hint)}
+}>Args_len>}
+
+  // These don't contain the length params, and the output params
+{<Args_lang<{
+      {(Arg_type)}
+      {(Arg_name)}
+      {(Arg_hint)}
+}>Args_lang>}
+
+  // All the params for the C function call
+{<Args_C<{
+      {(Arg_type)}
+      {(Arg_name)}
+      {(Arg_hint)}
+}>Args_C>}
+
+  // Empty list if return void, otherwise one element
+{<Return<{
+    {(Func_return_type)}
+}>Return>}
+
+{<Check_status<{
+      {(Status_type)}
+      {(Status_name)}
+      {(Status_hint)}
+}>Check_status>}
+
+  // If some arguments are pointer used to return something
+{<Args_result<{
+      {(Res_type)}
+      {(Res_name)}
+}>Args_result>}
+
+{<One_result<{
+      {(Res_type)}
+      {(Res_name)}
+}>One_result>}
+
+{<Zero_result<{
+    return Val_unit;
+}>Zero_result>}

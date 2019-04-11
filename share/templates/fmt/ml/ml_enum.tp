@@ -1,0 +1,8 @@
+{ enum_name = "{(Enum_name)}";
+  enums = [{<Enum_list<{
+    { i = "{(i)}";
+      ev_name = "{(Enum_val_name)}";
+      ev_init = "{(Enum_val_init)}";
+    };}>Enum_list>}
+  ]
+};

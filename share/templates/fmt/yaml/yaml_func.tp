@@ -1,0 +1,12 @@
+---
+Function:
+  Fun_name: {(Fun_name)}
+  Fun_return_type: {(Fun_return_type)}
+  Fun_annots:{<Fun_annots<{
+    - {(Annot)}}>Fun_annots>}
+  Fun_params:{<Args:
+<{
+    - Param_type: {(Param_type)}
+      Param_name: {(Param_name)}
+      Param_annots:{<Param_annots<{
+        - {(Annot)}}>Param_annots>}}>Args>}

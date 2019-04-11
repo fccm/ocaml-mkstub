@@ -1,0 +1,163 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Utils" rel="Chapter" href="Utils.html">
+<link title="Cmd_line" rel="Chapter" href="Cmd_line.html">
+<link title="XML_read" rel="Chapter" href="XML_read.html">
+<link title="XML_load" rel="Chapter" href="XML_load.html">
+<link title="Gccxml_t" rel="Chapter" href="Gccxml_t.html">
+<link title="Gccxml_cnt" rel="Chapter" href="Gccxml_cnt.html">
+<link title="Repr_t" rel="Chapter" href="Repr_t.html">
+<link title="Parse_in" rel="Chapter" href="Parse_in.html">
+<link title="Stmpl" rel="Chapter" href="Stmpl.html">
+<link title="Print_parsed" rel="Chapter" href="Print_parsed.html">
+<link title="S_repr_t" rel="Chapter" href="S_repr_t.html">
+<link title="Hxtr" rel="Chapter" href="Hxtr.html">
+<link title="Instructions_t" rel="Chapter" href="Instructions_t.html">
+<link title="Parse_instr" rel="Chapter" href="Parse_instr.html">
+<link title="H_repr_t" rel="Chapter" href="H_repr_t.html">
+<link title="Conv" rel="Chapter" href="Conv.html">
+<link title="Print_hr" rel="Chapter" href="Print_hr.html">
+<link title="Sambung" rel="Chapter" href="Sambung.html"><title>Gccxml_t</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;id&nbsp;=&nbsp;string<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_argument&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_a_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_a_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_a_attributes&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_arg&nbsp;=&nbsp;<span class="constructor">Arg</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_argument&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Ellipsis</span><br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_func&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_f_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_f_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_f_returns&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_f_attributes&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_f_args&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.gx_arg&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_enumvalue&nbsp;=&nbsp;{&nbsp;gx_ev_name&nbsp;:&nbsp;string;&nbsp;gx_ev_init&nbsp;:&nbsp;string;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_enumeration&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_e_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_e_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_e_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_e_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_e_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_e_values&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.gx_enumvalue&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_fundamentaltype&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ft_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ft_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ft_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ft_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_arraytype&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ar_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ar_min&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ar_max&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ar_type&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ar_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_ar_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_struct&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_access&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_artificial&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_members&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_s_bases&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_field&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_access&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_offset&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_fld_attributes&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_method&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_returns&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_access&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_inline&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_m_args&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.gx_arg&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_operatormethod&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_o_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_o_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_o_returns&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_o_args&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.gx_arg&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_constructor&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_c_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_c_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_c_args&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.gx_arg&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_destructor&nbsp;=&nbsp;{&nbsp;gx_d_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;&nbsp;gx_d_name&nbsp;:&nbsp;string;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_union&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_name&nbsp;:&nbsp;string&nbsp;option;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_members&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id&nbsp;list;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_u_bases&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_cvqualifiedtype&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_cv_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_cv_type&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_cv_qual&nbsp;:&nbsp;string&nbsp;list;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_typedef&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_td_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_td_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_td_type&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_td_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_variable&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_v_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_v_name&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_v_type&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_v_context&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_referencetype&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_r_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_r_type&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_r_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_r_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;gx_pointertype&nbsp;=&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_p_id&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_p_type&nbsp;:&nbsp;<span class="constructor">Gccxml_t</span>.id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_p_size&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gx_p_align&nbsp;:&nbsp;string;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;<span class="keyword">type</span>&nbsp;t&nbsp;=<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">FundamentalType</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_fundamentaltype<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Enumeration</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_enumeration<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ArrayType</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_arraytype<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Function</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_func<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Struct</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_struct<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Field</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_field<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Constructor</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_constructor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Destructor</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_destructor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Method</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_method<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">OperatorMethod</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_operatormethod<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Union</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_union<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Variable</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_variable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">CvQualifiedType</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_cvqualifiedtype<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">Typedef</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_typedef<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">PointerType</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_pointertype<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">ReferenceType</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">Gccxml_t</span>.gx_referencetype<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="keywordsign">|</span>&nbsp;<span class="constructor">TODO</span>&nbsp;<span class="keyword">of</span>&nbsp;<span class="constructor">XML_read</span>.tree<br>
+<span class="keyword">end</span></code></body></html>

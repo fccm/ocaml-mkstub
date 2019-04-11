@@ -1,0 +1,8 @@
+{ struct_name = "{(Struct_name)}";
+  fields = [{<Struct_fields<{
+    { field_name = "{(Field_name)}";
+      field_type = "{(Field_type)}";
+      field_annot = [ {<Field_annots:; <{"{(Annot)}"}>Field_annots>} ];
+    };}>Struct_fields>}
+  ];
+};

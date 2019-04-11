@@ -1,0 +1,4 @@
+(struct {(Struct_name)}
+{<Struct_fields<{  (field {(Field_type)} {(Field_name)} ({<Field_annots: <{"{(Annot)}"}>Field_annots>}))
+}>Struct_fields>})
+

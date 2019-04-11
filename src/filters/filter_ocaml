@@ -1,0 +1,80 @@
+#!/usr/bin/env ocaml
+
+(** replace upper case chars by lower case chars preceded by an underscore *)
+let to_underscores s =
+  let b = Buffer.create 20 in
+  String.iter (fun c ->
+    match c with
+    | 'A'..'Z' ->
+        Buffer.add_char b '_';
+        Buffer.add_char b (Char.lowercase c);
+    | _ ->
+        Buffer.add_char b c;
+  ) (String.uncapitalize s);
+  Buffer.contents b
+
+let char_which_case = function
+  | 'A'..'Z' -> `upper
+  | 'a'..'z' -> `lower
+  | _ -> `not_alpha
+
+let is_capitalized s =
+  String.length s <> 0 &&
+    char_which_case s.[0] = `upper
+
+let which_case s =
+  let contains_upper = ref false in
+  let contains_lower = ref false in
+  String.iter (fun c ->
+    match char_which_case c with
+    | `upper -> contains_upper := true
+    | `lower -> contains_lower := true
+    | `not_alpha -> ()
+  ) s;
+  match !contains_upper, !contains_lower with
+  | true, false  -> `only_upper
+  | false, true  -> `only_lower
+  | true, true   -> `mixed_case
+  | false, false -> `no_alpha
+
+let rw_f_name s =
+  match which_case s with
+  | `only_upper -> String.lowercase s
+  | `only_lower -> s
+  | `mixed_case -> String.uncapitalize s
+  | `no_alpha   -> s
+
+let rw_e_name s =
+  match which_case s with
+  | `only_upper -> s
+  | `only_lower -> String.capitalize s
+  | `mixed_case -> String.capitalize (to_underscores s)
+  | `no_alpha   -> s
+
+let rw_e_type s =
+  match which_case s with
+  | `only_upper -> String.lowercase s
+  | `only_lower -> s
+  | `mixed_case -> String.uncapitalize s
+  | `no_alpha   -> s
+
+let rw_t_type s =
+  match which_case s, is_capitalized s with
+  | `only_upper, _ -> "_" ^ s
+  | `only_lower, _ -> s
+  | `mixed_case, false -> s
+  | `mixed_case, true -> "_" ^ s
+  | `no_alpha, _ -> "_" ^ s
+
+let p = print_string
+let () =
+  match List.tl (Array.to_list Sys.argv) with
+  | ["-ml"; "Fun_name"; s] -> p (rw_f_name s)
+  | ["-ml"; "Fun_return_type"; "void"] -> p "unit"
+  | ["-ml"; "Fun_return_type"; s] -> p s
+  | ["-ml"; "Param_name"; ""] -> p ""
+  | ["-ml"; "Param_name"; s] -> p (s ^ ":")
+  | ["-ml"; "Param_type"; s] -> p (rw_t_type s)
+  | ["-ml"; "Enum_name"; s] -> p (rw_e_type s)
+  | ["-ml"; "Enum_val_name"; s] -> p (rw_e_name s)
+  | _ -> ()

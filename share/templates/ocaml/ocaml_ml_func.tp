@@ -1,0 +1,5 @@
+external {(cmd:Fun_name)} :
+{<Args::  unit -><{  {(cmd:Param_name)}{(cmd:Param_type)} ->
+}>Args>}  {(cmd:Fun_return_type)}
+  = "ocaml_{(Fun_name)}"
+
